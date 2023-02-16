@@ -17,17 +17,18 @@
 
         <header>
             <div class="left">
-            <a href="#" class="logo"><i class="fa-solid fa-gear"></i></a>
-            <ul class="navbar">
-                <li class="nav-btn"><a href="./index.html#home">Home</a></li>
-                <li class="nav-btn"><a href="./index.html#about-placeholder">About Us</a></li>
-                <!-- <li class="nav-btn"><a href="#">Our Robots</a></li> -->
-                <li class="nav-btn"><a href="./index.html#event-placeholder">Events</a></li>
-                <li class="nav-btn"><a href="./index.html#contact-placeholder">Contact Us</a></li>
-            </ul>
+                <a href="#" class="logo"><i class="fa-solid fa-gear"></i></a>
+                <ul class="navbar">
+                    <li class="nav-btn"><a href="./index.html#home">Home</a></li>
+                    <li class="nav-btn"><a href="./index.html#about-placeholder">About Us</a></li>
+                    <!-- <li class="nav-btn"><a href="#">Our Robots</a></li> -->
+                    <li class="nav-btn"><a href="./index.html#event-placeholder">Events</a></li>
+                    <li class="nav-btn"><a href="./index.html#contact-placeholder">Contact Us</a></li>
+                </ul>
             </div>
             <ul class="social">
-                <li class="soc-btn"><a href="https://www.instagram.com/ursaworks.robotics/"><i class="fa-brands fa-instagram"></i></a></li>
+                <li class="soc-btn"><a href="https://www.instagram.com/ursaworks.robotics/"><i
+                            class="fa-brands fa-instagram"></i></a></li>
                 <li class="soc-btn"><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
             </ul>
             <div class="burger-menu"><i class="fa-solid fa-bars" id="menu-icon"></i></div>
@@ -78,8 +79,7 @@
                                         are a diverse group of students from all different majors and backgrounds, and
                                         we are always looking for new members to join our team. We are a team of
                                         passionate students who are dedicated to learning and improving our skills in
-                                        engineering, business, and leadership. We are always looking for new members to
-                                        join our team, so if you are interested in joining, please contact us!</p>
+                                        engineering, business, and leadership.</p>
                                 </div>
                             </div>
                             <div class="what-we-do">
@@ -193,10 +193,11 @@
                     </div>
 
                     <div id="contact-placeholder"></div>
-                    <div class="contact-title">
-                        <h1>CONTACT US</h1>
-                    </div>
+
                     <div id="contact">
+                        <div class="contact-title">
+                            <h1>CONTACT US</h1>
+                        </div>
                         <div class="contact-block">
                             <div class="contact-text">
                                 <p>Have a question or want to get involved? Send us a message!</p>
@@ -282,80 +283,111 @@
 
         //===== make things appear when scrolling to its section =====//
         const about = document.querySelector('#about');
+        const whoWeAre = document.querySelector('.who-we-are');
+        const whatWeDo = document.querySelector('.what-we-do');
         const logoCircle = document.querySelector('.logo_circle');
         const doCircle = document.querySelector('.do_circle');
         const teamText = document.querySelector('.team-text');
         const members = document.querySelector('.members');
+        const aboutBlock = document.querySelector('.about-block');
         const eventPlaceholder = document.querySelector('#event-placeholder');
         const events = document.querySelector('#events');
         const contactPlaceholder = document.querySelector('#contact-placeholder');
         const contact = document.querySelector('#contact');
 
-        //who we are
-        if (about) {
-            const observer = new IntersectionObserver(entries => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        logoCircle.classList.add('appear');
-                        observer.unobserve(entry.target);
-                    }
+
+        function observeAbout() {
+            if (logoCircle) {
+                const observer = new IntersectionObserver(entries => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            logoCircle.classList.add('appear');
+                            observer.unobserve(entry.target);
+                        } else {
+                            logoCircle.classList.remove('appear');
+                        }
+                    });
                 });
-            });
-            observer.observe(about);
+                observer.observe(logoCircle);
+            }
+            if (doCircle) {
+                const observer = new IntersectionObserver(entries => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            doCircle.classList.add('appear');
+                            observer.unobserve(entry.target);
+                        } else {
+                            doCircle.classList.remove('appear');
+                        }
+                    });
+                });
+                observer.observe(doCircle);
+            }
+            if (teamText) {
+                const observer = new IntersectionObserver(entries => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            teamText.classList.add('appear');
+                            members.classList.add('appear');
+                            observer.unobserve(entry.target);
+                        } else {
+                            teamText.classList.remove('appear');
+                        }
+                    });
+                });
+                observer.observe(teamText);
+            }
+            if (members) {
+                const observer = new IntersectionObserver(entries => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            members.classList.add('appear');
+                            observer.unobserve(entry.target);
+                        } else {
+                            members.classList.remove('appear');
+                        }
+                    });
+                });
+                observer.observe(members);
+            }
         }
 
-        //what we do
-        if (doCircle) {
-            const observer = new IntersectionObserver(entries => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        doCircle.classList.add('appear');
-                        observer.unobserve(entry.target);
-                    }
+        function observeEvents() {
+            if (events) {
+                const observer = new IntersectionObserver(entries => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            events.classList.add('appear');
+                            observer.unobserve(entry.target);
+                        } else {
+                            events.classList.remove('appear');
+                        }
+                    });
                 });
-            });
-            observer.observe(doCircle);
+                observer.observe(events);
+            }
         }
 
-        //our team
-        if (teamText) {
-            const observer = new IntersectionObserver(entries => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        teamText.classList.add('appear');
-                        members.classList.add('appear');
-                        observer.unobserve(entry.target);
-                    }
+        function observeContact() {
+            if (contact) {
+                const observer = new IntersectionObserver(entries => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            contact.classList.add('appear');
+                            observer.unobserve(entry.target);
+                        } else {
+                            contact.classList.remove('appear');
+                        }
+                    });
                 });
-            });
-            observer.observe(teamText);
+                observer.observe(contact);
+            }
         }
 
-        //upcoming events
-        if (eventPlaceholder) {
-            const observer = new IntersectionObserver(entries => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        events.classList.add('appear');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            });
-            observer.observe(eventPlaceholder);
-        }
+        setInterval(observeAbout, 100);
+        setInterval(observeEvents, 100);
+        setInterval(observeContact, 100);
 
-        //contact us
-        if (contactPlaceholder) {
-            const observer = new IntersectionObserver(entries => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        contact.classList.add('appear');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            });
-            observer.observe(contactPlaceholder);
-        }
 
     </script>
 </body>
