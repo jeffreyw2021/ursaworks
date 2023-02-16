@@ -142,6 +142,7 @@ header {
     justify-content: space-between;
     align-items: center;
     margin-right: 3vh;
+    margin-top:5px;
 }
 .soc-btn {
     color: #f3f5f8;
