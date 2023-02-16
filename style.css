@@ -396,7 +396,7 @@ header {
     object-position: center;
 }
 .who-we-are-text {
-    margin-top: 1rem;
+    margin-top: 0rem;
     width: 40%;
     margin-left: 11vh;
     font-size: 20px;
@@ -415,7 +415,7 @@ header {
     justify-content: flex-end;
 }
 .what-we-do-text {
-    margin-top: 1rem;
+    margin-top: 0rem;
     width: 40%;
     margin-right: 6%;
     font-size: 20px;
