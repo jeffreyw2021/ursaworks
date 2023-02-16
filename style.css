@@ -571,8 +571,8 @@ header {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    width: 50vh;
-    min-height: 75vh;
+    width: 45vh;
+    min-height: 68vh;
     list-style: none;
     border-radius: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.05);
