@@ -542,7 +542,6 @@ header {
 
 #events h1 {
     font-size: 65px;
-    color: var(--white-color);
     margin-top: 0;
     margin-bottom: 0;
     opacity: 1;
@@ -604,8 +603,11 @@ header {
     background-position: 100% 100%;
 }
 
-.upcoming-event:hover .event-title,
 .upcoming-event:hover .date {
+    color: var(--black-color);
+}
+
+.upcoming-event:hover .event-title{
     color: var(--black-color);
 }
 
