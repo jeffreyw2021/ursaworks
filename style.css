@@ -399,7 +399,7 @@ header {
     margin-top: 1rem;
     width: 40%;
     margin-left: 11vh;
-    font-size: 22px;
+    font-size: 20px;
     color: var(--white-color);
     font-weight: normal;
 }
@@ -415,10 +415,10 @@ header {
     justify-content: flex-end;
 }
 .what-we-do-text {
-    margin-top: 3rem;
+    margin-top: 1rem;
     width: 40%;
     margin-right: 6%;
-    font-size: 22px;
+    font-size: 20px;
     color: var(--white-color);
     font-weight: normal;
 }
