@@ -703,6 +703,7 @@ form{
 .email,
 .name{
     width: 49%;
+    min-height: 50px;
     border-radius: 12px;
     font-size: 18px;
     padding-left:15px;
@@ -718,7 +719,7 @@ form{
 }
 .message{
     width: 100%;
-    min-height: 30vh;
+    min-height: 200px;
     height:auto;
     margin-top: 3%;
     border-radius: 20px;
