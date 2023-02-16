@@ -263,7 +263,7 @@ header {
 
 .wustl {
     margin-left: 0.5rem;
-    font-size: 20px;
+    font-size: 25px;
     color: var(--main-color);
     text-transform: capitalize;
 }
