@@ -364,9 +364,10 @@ header {
 .who-we-are {
     margin-top: 8rem;
     width: 100%;
-    height: 68vh;
+    height: auto;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
+    align-items: flex-start;
 }
 .logo_circle {
     width: 55vh;
@@ -381,11 +382,12 @@ header {
     border-radius: 20%;
     font-size: 100px;
     animation: shrink-and-grow 5s ease-in-out;
-    margin-left: 2%;
+    margin-left: -5%;
     opacity: 0;
 }
 .logo_circle.appear {
-    margin-left: 8%;
+    margin-left: 0;
+    margin-right: 10vh;
     opacity: 1;
     transition: all 3s ease;
 }
@@ -396,9 +398,9 @@ header {
     object-position: center;
 }
 .who-we-are-text {
-    margin-top: 0rem;
+    /* margin-top: 0rem; */
     width: 40%;
-    margin-left: 11vh;
+    /* margin-left: 11vh; */
     font-size: 20px;
     color: var(--white-color);
     font-weight: normal;
@@ -412,12 +414,13 @@ header {
     width: 100%;
     height: 65vh;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    align-items: flex-start;
 }
 .what-we-do-text {
     margin-top: 0rem;
     width: 40%;
-    margin-right: 6%;
+    /* margin-right: 6%; */
     font-size: 20px;
     color: var(--white-color);
     font-weight: normal;
@@ -439,11 +442,12 @@ header {
     font-size: 220px;
     color: var(--white-color);
     animation: shrink-and-grow 5s ease-in-out;
-    margin-right: 4%;
+    margin-right: -5%;
     opacity: 0;
 }
 .do_circle.appear {
-    margin-right: 9%;
+    margin-right: 0;
+    margin-left: 10vh;
     opacity: 1;
     transition: all 2s ease;
 }
@@ -470,7 +474,7 @@ header {
 }
 
 .team-text h1 {
-    font-size: 65px;
+    font-size: 40px;
 }
 
 .team-text.appear {
