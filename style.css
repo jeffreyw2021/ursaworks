@@ -568,6 +568,7 @@ header {
     align-items: center;
 }
 
+.event-section-title,
 .event-title,
 .date {
     color: var(--white-color)
