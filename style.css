@@ -39,11 +39,9 @@ html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow-y: scroll;
 }
 
 body {
-    overflow: scroll;
     background-color: var(--black-color);
     background-size: auto 100%;
     background-position: right;
