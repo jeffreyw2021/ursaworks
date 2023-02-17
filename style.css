@@ -46,6 +46,15 @@ body {
     background-size: auto 100%;
     background-position: right;
 }
+body {
+    overflow: scroll;
+    scrollbar-width: none; /* hide the scrollbar on Firefox */
+    -ms-overflow-style: none; /* hide the scrollbar on Internet Explorer and Edge */
+  }
+  
+  body::-webkit-scrollbar {
+    display: none; /* hide the scrollbar on Chrome, Safari, and Opera */
+  }
 
 a {
     color: inherit;
@@ -70,6 +79,7 @@ header {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.05);
     transition: all .2s ease;
     border-radius: 40px;
+    overflow:hidden;
 }
 .left{
     display: flex;
@@ -199,6 +209,7 @@ header {
     cursor: pointer;
     animation: float 3s ease-in-out infinite;
     animation-delay: 1s;
+    overflow: hidden;
 }
 
 #scroll-to-top-btn:hover {
@@ -206,6 +217,10 @@ header {
     color: var(--main-color);
     transition: all 0.1s ease;
     animation-play-state: paused;
+}
+
+.home{
+    overflow: hidden;
 }
 
 .intro {
@@ -340,6 +355,11 @@ header {
     position: relative;
     opacity: 0;
     z-index: 10;
+    overflow: hidden;
+}
+
+.about{
+    overflow: hidden;
 }
 
 .about-block {
@@ -542,6 +562,7 @@ header {
     width: 100%;
     background-color: var(--black-color);
     position: relative;
+    overflow: hidden;
 }
 
 #events {
@@ -551,6 +572,7 @@ header {
     align-items: center;
     margin-top:-1rem;
     opacity:0;
+    overflow: hidden;
 }
 #events.appear {
     opacity: 1;
@@ -636,12 +658,14 @@ header {
     width: 100%;
     background-color: var(--black-color);
     position: relative;
+    overflow: hidden;
 }
 
 #contact{
     margin-bottom: 5vh;
     margin-top:0rem;
     opacity:0;
+    overflow: hidden;
 }
 #contact.appear{
     opacity: 1;
@@ -782,6 +806,7 @@ footer{
     font-weight:200;
     color:#808080;
     font-size: 12.6px;
+    overflow: hidden;
 }
 
 hr{
