@@ -88,13 +88,13 @@ header {
 
 .logo i {
     color: #f3f5f8;
-    font-size: 2rem;
+    font-size: 1.8rem;
     transition: all .2s ease;
 }
 
 .logo span {
     color: #f3f5f8;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
     margin-left: 8px;
@@ -121,7 +121,7 @@ header {
 .nav-btn {
     color: #f3f5f8;
     font-family: 'Poppins', sans-serif;
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 500;
     padding: 5px 3px;
     margin: 0px 30px;
@@ -147,7 +147,7 @@ header {
 .soc-btn {
     color: #f3f5f8;
     font-family: 'Poppins', sans-serif;
-    font-size: 2.2rem;
+    font-size: 2rem;
     font-weight: 500;
     padding: 5px 3px;
     margin-right:3vh;
@@ -167,7 +167,7 @@ header {
 
 .burger-menu i {
     color: #f3f5f8;
-    font-size: 28px;
+    font-size: 25px;
     margin-right: 10vh;
     transition: all .2s ease;
 }
@@ -177,7 +177,7 @@ header {
 }
 
 #menu-icon {
-    font-size: 35px;
+    font-size: 31.5px;
     cursor: pointer;
     z-index: 102;
     display: none;
@@ -194,7 +194,7 @@ header {
     border-radius: 50%;
     background-color: var(--main-color);
     color: var(--white-color);
-    font-size: 20px;
+    font-size: 18px;
     text-align: center;
     border: none;
     z-index: 100;
@@ -223,7 +223,7 @@ header {
 .hello {
     display: block;
     position: relative;
-    font-size: 40px;
+    font-size: 36px;
     letter-spacing: 5px;
     color: #f3f5f8;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.37);
@@ -241,7 +241,7 @@ header {
 
 .intro h1 {
     display: block;
-    font-size: 90px;
+    font-size: 81px;
     font-weight: 800;
     color: #605ddc;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
@@ -249,21 +249,21 @@ header {
 
 .we {
     display: block;
-    font-size: 90px;
+    font-size: 81px;
     font-weight: 800;
     color: #f3f5f8;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
 }
 
 .multitext {
-    font-size: 95px;
+    font-size: 85.5px;
     color: #f3f5f8;
     text-transform: capitalize;
 }
 
 .wustl {
     margin-left: 0.5rem;
-    font-size: 25px;
+    font-size: 22.5px;
     color: var(--main-color);
     text-transform: capitalize;
 }
@@ -279,7 +279,7 @@ header {
 
 .banner-btn {
     cursor: pointer;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 500;
     color: var(--white-color);
     background: linear-gradient(150deg, rgb(51, 51, 51, 0.9), rgba(51, 51, 51, 0.7));
@@ -381,7 +381,7 @@ header {
     -webkit-backdrop-filter: blur(20px);
     box-shadow: 4px 8px rgba(0, 0, 0, 0.08), 0 6px 20px 0 rgba(0, 0, 0, 0.06);
     border-radius: 20%;
-    font-size: 100px;
+    font-size: 90px;
     animation: shrink-and-grow 5s ease-in-out;
     margin-left: -5%;
     opacity: 0;
@@ -408,7 +408,7 @@ header {
     /* margin-top: 0rem; */
     width: 40%;
     /* margin-left: 11vh; */
-    font-size: 20px;
+    font-size: 18px;
     color: var(--white-color);
     font-weight: normal;
 }
@@ -417,7 +417,7 @@ header {
 }
 
 .what-we-do {
-    margin-top: 3rem;
+    margin-top: 6rem;
     width: 100%;
     height: 65vh;
     display: flex;
@@ -428,7 +428,7 @@ header {
     margin-top: 0rem;
     width: 40%;
     /* margin-right: 6%; */
-    font-size: 20px;
+    font-size: 18px;
     color: var(--white-color);
     font-weight: normal;
 }
@@ -446,7 +446,7 @@ header {
     -webkit-backdrop-filter: blur(20px);
     box-shadow: 4px 8px rgba(0, 0, 0, 0.08), 0 6px 20px 0 rgba(0, 0, 0, 0.06);
     border-radius: 20%;
-    font-size: 220px;
+    font-size: 198px;
     color: var(--white-color);
     animation: shrink-and-grow 5s ease-in-out;
     margin-right: -5%;
@@ -496,7 +496,7 @@ header {
     transition: all 1s ease;
 }
 .team-text h1 {
-    font-size: 40px;
+    font-size: 36px;
 }
 
 .members {
@@ -526,7 +526,7 @@ header {
     transition: all 1s ease;
 }
 .members p {
-    font-size: 25px;
+    font-size: 22.5px;
     font-weight: 400;
 }
 .members li {
@@ -561,7 +561,7 @@ header {
 }
 
 #events h1 {
-    font-size: 65px;
+    font-size: 58.5px;
     margin-top: 0;
     margin-bottom: 0;
     opacity: 1;
@@ -653,7 +653,7 @@ header {
 }
 
 .contact-title{
-    font-size: 35px;
+    font-size: 31.5px;
     color: var(--white-color);
     margin-top: 0;
     margin-bottom: 2%;
@@ -680,7 +680,7 @@ header {
 }
 
 .contact-text{
-    font-size: 25px;
+    font-size: 22.5px;
     font-weight: 400;
     margin: 0;
     padding: 0;
@@ -726,7 +726,7 @@ form{
     width: 49%;
     min-height: 50px;
     border-radius: 12px;
-    font-size: 18px;
+    font-size: 16.2px;
     padding-left:15px;
     opacity:0.75;
 }
@@ -745,13 +745,13 @@ form{
     margin-top: 3%;
     border-radius: 20px;
     resize: none;
-    font-size: 18px;
+    font-size: 16.2px;
     padding: 15px;
     opacity:0.75;
 }
 .submit {
     cursor: pointer;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 500;
     color: #f3f5f8;
     background: linear-gradient(150deg, rgb(51, 51, 51, 0.9), rgba(51, 51, 51, 0.7));
@@ -784,7 +784,7 @@ footer{
     font-family: 'Poppins', sans-serif;
     font-weight:200;
     color:#808080;
-    font-size: 14px;
+    font-size: 12.6px;
 }
 
 hr{
@@ -826,7 +826,7 @@ footer a:hover{
     
 }
 .footer-icon a{
-    font-size: 25px;
+    font-size: 22.5px;
 }
 
 /* ========== ANIMATION ========== */
