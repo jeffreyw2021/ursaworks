@@ -424,7 +424,7 @@ a {
 
 .logo_circle.appear {
     margin-left: 0;
-    margin-right: 10vh;
+    margin-right: 6vh;
     opacity: 1;
     transition: all 3s ease;
 }
@@ -491,7 +491,7 @@ a {
 
 .do_circle.appear {
     margin-right: 0;
-    margin-left: 10vh;
+    margin-left: 6vh;
     opacity: 1;
     transition: all 2s ease;
 }
@@ -535,7 +535,7 @@ a {
 }
 
 .members {
-    width: 80vh;
+    width: 90%;
     height: auto;
     background: linear-gradient(120deg, rgb(243, 245, 248, 0.8), rgba(243, 245, 248, 0.5));
     backdrop-filter: blur(20px);
@@ -544,7 +544,7 @@ a {
     border-radius: 50px;
     margin-top: 0%;
     margin-bottom: 5%;
-    padding: 8vh 10vh;
+    padding: 7vh 9vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -895,51 +895,60 @@ footer a:hover {
 
     .intro {
         top: 50%;
-        left: 10%;
+        left: 8%;
     }
 
     .hello {
-        font-size: 25px;
+        font-size: 20px;
     }
 
     .hello::after {
         height: 3px;
-        width: 35px;
+        width: 25px;
         bottom: 8px;
     }
 
     .intro h1 {
-        font-size: 60px;
+        font-size: 50px;
         font-weight: 700;
     }
 
     .we {
-        font-size: 60px;
+        font-size: 50px;
         font-weight: 700;
     }
 
     .multitext {
-        font-size: 60px;
+        font-size: 50px;
     }
 
     .wustl {
         margin-left: 0.5rem;
-        font-size: 15px;
+        font-size: 12px;
+    }
+    .banner-btn {
+        font-size: 1rem;
     }
 
     .logo_circle img {
         width: 100%;
         height: 100%;
     }
+    .who-we-are-text {
+        font-size: 16px;
+    }
+    .what-we-do-text{
+        font-size: 16px;
+    }
 
     .members {
-        width: 10%;
+        width: 40vh;
         padding: 4vh 5vh;
         border-radius: 30px;
         margin-bottom: 8vh;
     }
     .members p{
-        font-size: 20px;
+        font-size: 14px;
     }
 
     #events h1 {
@@ -960,7 +969,7 @@ footer a:hover {
     }
 
     .contact-text {
-        font-size: 18px;
+        font-size: 16px;
         font-weight: 300;
         margin-top: 8%;
         margin-left: 6%;
@@ -1099,8 +1108,8 @@ footer a:hover {
     }
 
     .logo_circle img {
-        width: 80%;
-        height: 90%;
+        width: auto;
+        height: 85%;
     }
 
     .who-we-are-text {
@@ -1126,6 +1135,7 @@ footer a:hover {
     .do_circle {
         width: 80%;
         border-radius: 40px;
+        font-size: 120px;
     }
 
     .do_circle.appear {
