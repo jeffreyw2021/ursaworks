@@ -344,7 +344,7 @@ a {
     transform: translate(0, -50%);
     opacity:90%;
     max-width: 100%;
-    z-index: 1;
+    z-index: -10;
     animation: float 3s ease-in-out infinite;
 }
 
@@ -358,7 +358,7 @@ a {
     max-width: 100%;
     opacity: 0;
     animation: fade 3s ease-in-out infinite, float 3s ease-in-out infinite;
-    z-index: 1;
+    z-index: -10;
 }
 
 /* ========== ABOUT US ========== */
