@@ -535,7 +535,8 @@ a {
 }
 
 .members {
-    width: 80vh;
+    width: 90%;
+    max-width:80vh;
     height: auto;
     background: linear-gradient(120deg, rgb(243, 245, 248, 0.8), rgba(243, 245, 248, 0.5));
     backdrop-filter: blur(20px);
@@ -946,7 +947,6 @@ footer a:hover {
     }
 
     .members {
-        width: 90%;
         padding: 4vh 5vh;
         border-radius: 30px;
         margin-bottom: 8vh;
