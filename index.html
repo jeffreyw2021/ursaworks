@@ -281,6 +281,13 @@
             });
         });
 
+        // show menu in mobile view
+        let menu = document.querySelector('#menu-icon');
+        let nav = document.querySelector('.navbar');
+        menu.onclick = () => {
+        nav.classList.toggle('open');
+        }
+
         //===== make things appear when scrolling to its section =====//
         const about = document.querySelector('#about');
         const whoWeAre = document.querySelector('.who-we-are');
@@ -296,6 +303,7 @@
         const contact = document.querySelector('#contact');
 
 
+        //===== trigger when observed =====//
         function observeAbout() {
             if (logoCircle) {
                 const observer = new IntersectionObserver(entries => {
