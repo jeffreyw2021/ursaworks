@@ -15,7 +15,7 @@
 <body>
     <container>
 
-        <header>
+        <header class="regular-header">
             <div class="left">
                 <a href="#" class="logo"><i class="fa-solid fa-gear"></i></a>
                 <ul class="navbar">
@@ -34,8 +34,22 @@
             <div class="burger-menu"><i class="fa-solid fa-bars" id="menu-icon"></i></div>
         </header>
 
-        <main>
+        <header class="responsive-header">
+            <ul class="res-nav">
+                <li class="res-nav-btn"><a href="./index.html#home">Home</a></li>
+                <li class="res-nav-btn"><a href="./index.html#about-placeholder">About Us</a></li>
+                <!-- <li class="nav-btn"><a href="#">Our Robots</a></li> -->
+                <li class="res-nav-btn"><a href="./index.html#event-placeholder">Events</a></li>
+                <li class="res-nav-btn"><a href="./index.html#contact-placeholder">Contact Us</a></li>
+            </ul>
+            <ul class="res-soc">
+                <li class="res-soc-btn"><a href="https://www.instagram.com/ursaworks.robotics/"><i
+                            class="fa-brands fa-instagram"></i></a></li>
+                <li class="res-soc-btn"><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+            </ul>
+        </header>
 
+        <main>
             <div class="main-content">
 
                 <button id="scroll-to-top-btn" type='button'>
@@ -281,12 +295,20 @@
             });
         });
 
-        // show menu in mobile view
-        let menu = document.querySelector('#menu-icon');
-        let nav = document.querySelector('.navbar');
-        menu.onclick = () => {
-        nav.classList.toggle('open');
-        }
+        //===== show menu in mobile view =====//
+        const menuIcon = document.getElementById('menu-icon');
+        const responsiveHeader = document.querySelector('.responsive-header');
+        let isOpen = false;
+
+        menuIcon.addEventListener('click', () => {
+            if (isOpen) {
+                responsiveHeader.style.right = '-190%';
+                isOpen = false;
+            } else {
+                responsiveHeader.style.right = '0';
+                isOpen = true;
+            }
+        });
 
         //===== make things appear when scrolling to its section =====//
         const about = document.querySelector('#about');
