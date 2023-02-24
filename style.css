@@ -338,7 +338,7 @@ a {
 .robot-cube {
     position: absolute;
     top: 15%;
-    right: 20px;
+    right: 50px;
     height: 73vh;
     border-radius: 20%;
     transform: translate(0, -50%);
@@ -351,7 +351,7 @@ a {
 .robot-cube-glow {
     position: absolute;
     top: 15%;
-    right: 20px;
+    right: 50px;
     height: 73vh;
     border-radius: 20%;
     transform: translate(0, -50%);
