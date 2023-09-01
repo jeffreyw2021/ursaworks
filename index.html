@@ -6,14 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WUSTL Robomaster Ursaworks</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-bright.css">
     <link rel="stylesheet" href="all.css">
     <script src="https://kit.fontawesome.com/c54adec46d.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <link rel="icon" href="./items/bear_icon.png" type="image/png">
 </head>
 
 <body>
-    <container>
+
+    <div class="pop-container">
+
+    </div>
+
+    <div class="container">
 
         <header class="regular-header">
             <div class="left">
@@ -21,7 +27,7 @@
                 <ul class="navbar">
                     <li class="nav-btn"><a href="./index.html#home">Home</a></li>
                     <li class="nav-btn"><a href="./index.html#about-placeholder">About Us</a></li>
-                    <!-- <li class="nav-btn"><a href="#">Our Robots</a></li> -->
+                    <li class="nav-btn"><a href="./index.html#team-placeholder">Our Team</a></li>
                     <li class="nav-btn"><a href="./index.html#event-placeholder">Events</a></li>
                     <li class="nav-btn"><a href="./index.html#contact-placeholder">Contact Us</a></li>
                 </ul>
@@ -56,7 +62,8 @@
                     <i class="fa-solid fa-angles-up"></i>
                 </button>
 
-                <container>
+                <div class="container">
+
                     <div id="home">
                         <div class="bg-rectangle"></div>
                         <div class="intro">
@@ -66,52 +73,65 @@
                                 <h1><span class="multitext"></span></h1>
                                 <span class="wustl"></span>
                                 <div class="btns">
-                                    <a class="banner-btn">Join Our Team</a>
+                                    <a class="banner-btn" href="./recruit.html">Join Our Team</a>
                                     <a class="banner-btn">Support Us</a>
                                 </div>
                             </div>
                         </div>
                         <div class="cube">
-                            <img class="robot-cube" src="items/robot_moon.png" alt="Robot Cube">
-                            <img class="robot-cube-glow" src="items/robot_moon_glow.png" alt="Robot Cube Glow">
+                            <img class="robot-cube" src="items/robot_moon_white_copy.png" alt="Robot Cube">
+                            <img class="robot-cube-glow" src="items/robot_moon_white_copy.png" alt="Robot Cube Glow">
                         </div>
                     </div>
 
                     <div id="about-placeholder"></div>
-
                     <div id="about">
                         <div class="about-block">
+                            <!-- <div class="about-title">
+                                <h2>ABOUT US</h2>
+                            </div> -->
                             <div class="who-we-are">
                                 <div class="logo_circle">
-                                    <img src="./items/ursaworks_logo_star.png" alt="ursalogo">
+                                    <div class="logo_img"></div>
                                 </div>
                                 <div class="who-we-are-text">
-                                    <h1>Who We Are</h1>
-                                    <br>
-                                    <p>Ursaworks is a student-run organization at Washington University in St. Louis
-                                        that designs, builds, and competes with robots in the Robomaster competition. We
-                                        are a diverse group of students from all different majors and backgrounds, and
-                                        we are always looking for new members to join our team. We are a team of
-                                        passionate students who are dedicated to learning and improving our skills in
-                                        engineering, business, and leadership.</p>
+                                    <div class="text-block">
+                                        <h1>Our Mission</h1>
+                                        <p>At Ursaworks at WashU, we strive to advance the next generation of robotics
+                                            development and industry development. Our focus is to gather passionate
+                                            students
+                                            who are excited to innovate and inspire, regardless of discipline or
+                                            background.
+                                            We hope to nurture and develop talent through competition and diligence.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="what-we-do">
-                                <div class="what-we-do-text">
-                                    <h1>What We Do</h1>
-                                    <br>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                                        fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                                        culpa qui officia deserunt mollit anim id est laborum.</p>
-                                </div>
+                            <div class="who-we-are">
                                 <div class="do_circle">
-                                    <i class="fa-solid fa-screwdriver-wrench"></i>
+                                    <div class="do_img"></div>
+                                </div>
+                                <div class="who-we-are-text">
+                                    <div class="text-block">
+                                        <h1>Our Robot</h1>
+                                        <p>Each year, the RoboMaster Competition challenges teams to create design and
+                                            build robots to play a paintball-like game. Last season, we designed, built,
+                                            and tested the following robots. </p>
+                                    </div>
+                                    <div class="text-block">
+                                        <h1>"STANDARD"</h1>
+                                        <p>The Standard is a small but quick ground robot. These robots launch 17mm
+                                            pellets and have a high fire rate. As a result, they deal and receive most
+                                            of the robot-on-robot damage during matches. In our design, we've added the
+                                            method of gyroscope, which allows the chassis of the robot to rotate while
+                                            moving. The gimbal of the robot remains stable and aiming. This mechanism
+                                            makes it less likely for hostile robots to hit our armor plate, resulting in
+                                            a reduction in our health count.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="our-team">
+                            <!-- <div class="our-team">
                                 <div class="team-text">
                                     <h1>Meet Our Team</h1>
                                 </div>
@@ -177,37 +197,130 @@
                                         <p>Lorem Ipsum</p>
                                     </li>
                                 </ul>
+                            </div> -->
+                        </div>
+                    </div>
+
+                    <div id="rmul-placeholder"></div>
+                    <div id="rmul">
+                        <div class="rmul-block">
+                            <div class="rmul-title">
+                                <h3>The RMUL Competition</h3>
                             </div>
+                            <div class="rmul-cotainer">
+                                <!-- <div class="logo_circle">
+                                    <div class="logo_img"></div>
+                                </div> -->
+                                <div class="rmul-text">
+                                    <div class="rmul-text-block">
+                                        <p>The <span class="highlight">RoboMaster University Championship</span> is an
+                                            annual global robotics contest
+                                            with 200+ universities. Hosted by DJI, it empowers students to showcase
+                                            skills and push boundaries. Robots in a grand arena tackle challenges,
+                                            controlled by operators using onboard cameras. Matches involve disarming
+                                            opponents' robots and bases, calculating damage through pressure-sensitive
+                                            plates from launched projectiles. The event applies classroom-taught skills
+                                            in computer vision, embedded systems, and mechanical design practically.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="rmul-btn" href="https://aruw.org/what-is-robomaster" target="_blank"
+                                rel="noopener">more about Robomaster <i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+
+                    <div id="team-placeholder"></div>
+                    <div id="team">
+                        <div class="team-block">
+                            <div class="team-title">
+                                <h3>Meet Our Team</h3>
+                            </div>
+                            <div class="team-container">
+                                <div class="team-text">
+                                    <div class="team-text-block">
+                                        <div class="person">
+                                            <div class="name">Bruce Li(Bruce Li)</div>
+                                            <div class="position">treasurer | driver | CV</div>
+                                        </div>
+                                        <div class="person">
+                                            <div class="name">Amanda Deng (Amanda Deng)</div>
+                                            <div class="position">mechanical</div>
+                                        </div>
+                                        <div class="person">
+                                            <div class="name">Alan Shao (Alan Shao)</div>
+                                            <div class="position">general member</div>
+                                        </div>
+                                        <div class="person">
+                                            <div class="name">Max Liu (Max Liu)</div>
+                                            <div class="position">mechanical | media</div>
+                                        </div>
+                                        <div class="person">
+                                            <div class="name">Anny Qiao (Anny Qiao)</div>
+                                            <div class="position">vice president | embedded system | mechanical</div>
+                                        </div>
+                                        <div class="person">
+                                            <div class="name">Jeffrey Wang (Jeffrey Wang)</div>
+                                            <div class="position">PR</div>
+                                        </div>
+                                        <div class="person">
+                                            <div class="name">Mark Quan (Mark Quan)</div>
+                                            <div class="position">president | embedded system | mechanical design</div>
+                                        </div>
+                                        <div class="person">
+                                            <div class="name">Christine Li (Christine Li)</div>
+                                            <div class="position">accountant</div>
+                                        </div>
+                                        <div class="person">
+                                            <div class="name">David Wang (David Wang)</div>
+                                            <div class="position">mechanical</div>
+                                        </div>
+                                        <div class="person">
+                                            <div class="name">吴桐 (Tong Wu)</div>
+                                            <div class="position">electrical support</div>
+                                        </div>
+                                        <div class="person">
+                                            <div class="name">Steven Luyapan (Steven)</div>
+                                            <div class="position">mechanical design</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- <div class="team_circle">
+                                    <div class="team_img"></div>
+                                </div> -->
+                            </div>
+                            <a class="rmul-btn" href="./recruit.html" target="_blank"
+                                rel="noopener">Join Our Team</a>
                         </div>
                     </div>
 
                     <div id="event-placeholder"></div>
                     <div id="events">
-                        <h1 class="event-section-title">UPCOMING EVENTS</h1>
+                        <h1 class="event-section-title">OUR EVENTS</h1>
                         <ul class="upcoming">
-                            <li class="upcoming-event">
-                                <a href="index.html">
-                                    <h1 class="event-title">event</h1>
-                                    <span class="date">12/12/2022</span>
-                                </a>
+                            <li class="upcoming-event" id="event1">
+                                <iframe id="video1"
+                                    src="https://www.youtube.com/embed/Ali2EHL7Axg?enablejsapi=1&controls=0&modestbranding=1&rel=0&autohide=1&fs=0"
+                                    frameborder="0" allowfullscreen></iframe>
+                                <div class="event-text">
+                                    <h1 class="event-title">Seattle Match</h1>
+                                    <span class="date">2023</span>
+                                </div>
                             </li>
-                            <li class="upcoming-event">
-                                <a href="index.html">
-                                    <h1 class="event-title">event</h1>
-                                    <span class="date">12/12/2022</span>
-                                </a>
-                            </li>
-                            <li class="upcoming-event">
-                                <a href="index.html">
-                                    <h1 class="event-title">event</h1>
-                                    <span class="date">12/12/2022</span>
-                                </a>
+                            <li class="upcoming-event" id="event2">
+                                <iframe id="video2"
+                                    src="https://www.youtube.com/embed/mBHfdk0bnVg?enablejsapi=1&start=12"
+                                    frameborder="0" allowfullscreen></iframe>
+                                <div class="event-text">
+                                    <h1 class="event-title">RMNA: <br>WashU vs. Purdue</h1>
+                                    <span class="date">2023</span>
+                                </div>
                             </li>
                         </ul>
                     </div>
 
                     <div id="contact-placeholder"></div>
-
                     <div id="contact">
                         <div class="contact-title">
                             <h1>CONTACT US</h1>
@@ -216,23 +329,13 @@
                             <div class="contact-text">
                                 <p>Have a question or want to get involved? Send us a message!</p>
                             </div>
-                            <div class="contact-form">
-                                <form action="index.html" method="post">
-                                    <div class="name-email">
-                                        <input type="text" class="name" placeholder="Name">
-                                        <input type="email" class="email" placeholder="Email">
-                                    </div>
-                                    <div class="subject">
-                                        <textarea class="message" placeholder="Message"></textarea>
-                                        <button type="submit" class="submit"><i class="fa-solid fa-paper-plane"></i>
-                                            Send</button>
-                                    </div>
-                                </form>
+                            <div class="contact-detail">
+                                <p>loremIpsum@gmail.com</p>
                             </div>
                         </div>
                     </div>
 
-                </container>
+                </div>
 
             </div>
         </main>
@@ -263,163 +366,14 @@
                 </div>
             </div>
         </footer>
-    </container>
+    </div>
 
-    <!-- ========== JAVASCRIPT ==========-->
-    <script>
-
-        //===== typing animation =====//
-        var bannerTyping = new Typed('.multitext', {
-            strings: ['URSAWORKS'],
-            typeSpeed: 110,
-            backSpeed: 80,
-            backDelay: 1500,
-            loop: false
-        });
-        var wustlTyping = new Typed('.wustl', {
-            strings: ['robomasters from Washington University in St.Louis'],
-            typeSpeed: 15,
-            backSpeed: 80,
-            backDelay: 1500,
-            loop: false,
-            showCursor: false
-        });
-
-        //===== scroll to top button =====//
-        const scrollToTopBtn = document.querySelector("#scroll-to-top-btn");
-        scrollToTopBtn.addEventListener("click", () => {
-            window.scrollTo({
-                top: 0,
-                left: 0,
-                behavior: "smooth"
-            });
-        });
-
-        //===== show menu in mobile view =====//
-        const menuIcon = document.getElementById('menu-icon');
-        const responsiveHeader = document.querySelector('.responsive-header');
-        let isOpen = false;
-
-        menuIcon.addEventListener('click', () => {
-            if (isOpen) {
-                responsiveHeader.style.right = '-190%';
-                isOpen = false;
-            } else {
-                responsiveHeader.style.right = '0';
-                isOpen = true;
-            }
-        });
-
-        //===== make things appear when scrolling to its section =====//
-        const about = document.querySelector('#about');
-        const whoWeAre = document.querySelector('.who-we-are');
-        const whatWeDo = document.querySelector('.what-we-do');
-        const logoCircle = document.querySelector('.logo_circle');
-        const doCircle = document.querySelector('.do_circle');
-        const teamText = document.querySelector('.team-text');
-        const members = document.querySelector('.members');
-        const aboutBlock = document.querySelector('.about-block');
-        const eventPlaceholder = document.querySelector('#event-placeholder');
-        const events = document.querySelector('#events');
-        const contactPlaceholder = document.querySelector('#contact-placeholder');
-        const contact = document.querySelector('#contact');
+    <script src="./script.js"></script>
+    <!-- Load the YouTube IFrame API -->
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="./video.js"></script>
 
 
-        //===== trigger when observed =====//
-        function observeAbout() {
-            if (logoCircle) {
-                const observer = new IntersectionObserver(entries => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            logoCircle.classList.add('appear');
-                            observer.unobserve(entry.target);
-                        } else {
-                            logoCircle.classList.remove('appear');
-                        }
-                    });
-                });
-                observer.observe(logoCircle);
-            }
-            if (doCircle) {
-                const observer = new IntersectionObserver(entries => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            doCircle.classList.add('appear');
-                            observer.unobserve(entry.target);
-                        } else {
-                            doCircle.classList.remove('appear');
-                        }
-                    });
-                });
-                observer.observe(doCircle);
-            }
-            if (teamText) {
-                const observer = new IntersectionObserver(entries => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            teamText.classList.add('appear');
-                            members.classList.add('appear');
-                            observer.unobserve(entry.target);
-                        } else {
-                            teamText.classList.remove('appear');
-                        }
-                    });
-                });
-                observer.observe(teamText);
-            }
-            if (members) {
-                const observer = new IntersectionObserver(entries => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            members.classList.add('appear');
-                            observer.unobserve(entry.target);
-                        } else {
-                            members.classList.remove('appear');
-                        }
-                    });
-                });
-                observer.observe(members);
-            }
-        }
-
-        function observeEvents() {
-            if (events) {
-                const observer = new IntersectionObserver(entries => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            events.classList.add('appear');
-                            observer.unobserve(entry.target);
-                        } else {
-                            events.classList.remove('appear');
-                        }
-                    });
-                });
-                observer.observe(events);
-            }
-        }
-
-        function observeContact() {
-            if (contact) {
-                const observer = new IntersectionObserver(entries => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            contact.classList.add('appear');
-                            observer.unobserve(entry.target);
-                        } else {
-                            contact.classList.remove('appear');
-                        }
-                    });
-                });
-                observer.observe(contact);
-            }
-        }
-
-        setInterval(observeAbout, 100);
-        setInterval(observeEvents, 100);
-        setInterval(observeContact, 100);
-
-
-    </script>
 </body>
 
 </html>
