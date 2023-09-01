@@ -766,7 +766,7 @@ main{
     font-size: 20px;
 }
 .name{
-    font-weight: 400;
+    font-weight: 600;
 }
 .name, .position{
     white-space: nowrap;
@@ -992,6 +992,7 @@ main{
     justify-content: center;
     align-items: center;
     width: 29%;
+    min-width: 342px;
     min-height: 68vh;
     list-style: none;
     border-radius: 10px;
@@ -1260,6 +1261,7 @@ footer a:hover {
     }
     .upcoming-event{
         width:100% !important;
+        min-width: 342px;
     }
 
 }
@@ -1313,12 +1315,30 @@ footer a:hover {
 
     .upcoming-event{
         width: 70%;
+        min-width: 342px;
+    }
+
+    .person{
+        display:flex;
+        flex-direction: column !important;
+        justify-content: flex-start !important;
+        align-items: flex-start;
+        font-size: 20px;
+    }
+    .position{
+        white-space: normal;
     }
 
 }
 
 @media (max-width: 1024px) {
-
+    .person{
+        display:flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        font-size: 20px;
+    }
     .navbar {
         display: none;
     }
@@ -1452,6 +1472,7 @@ footer a:hover {
 
     .upcoming-event{
         width: 40%;
+        min-width: 342px;
     }
 
     .footer-text {
@@ -1482,6 +1503,17 @@ footer a:hover {
 @media (max-width: 1366px) {
     .upcoming-event{
         width: 40%;
+        min-width: 342px;
+    }
+    .person{
+        display:flex;
+        flex-direction: column !important;
+        justify-content: flex-start !important;
+        align-items: flex-start;
+        font-size: 20px;
+    }
+    .position{
+        white-space: normal;
     }
 }
 
