@@ -1323,7 +1323,7 @@ footer a:hover {
         flex-direction: column !important;
         justify-content: flex-start !important;
         align-items: flex-start;
-        font-size: 20px;
+        font-size:15px;
     }
     .name, .position{
         white-space: normal;
@@ -1344,7 +1344,6 @@ footer a:hover {
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
-        font-size: 20px;
     }
     .navbar {
         display: none;
@@ -1524,7 +1523,6 @@ footer a:hover {
         flex-direction: column !important;
         justify-content: flex-start !important;
         align-items: flex-start;
-        font-size: 20px;
     }
     .position{
         white-space: normal;
