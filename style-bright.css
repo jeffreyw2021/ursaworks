@@ -304,7 +304,7 @@ main{
 .wustl {
     margin-left: 0.5rem;
     font-size: 22.5px;
-    color: var(--white-color);
+    color: #000 !important;
     text-transform: capitalize;
 }
 
@@ -1325,10 +1325,17 @@ footer a:hover {
         align-items: flex-start;
         font-size: 20px;
     }
-    .position{
+    .name, .position{
         white-space: normal;
     }
-
+    .team-block{
+        padding: 40px 40px !important;
+        font-size: 12px !important;
+    }
+    .recruit-block{
+        padding: 40px 40px !important;
+        font-size: 12px !important;
+    }
 }
 
 @media (max-width: 1024px) {
@@ -1497,6 +1504,13 @@ footer a:hover {
 
     .footer-icon a {
         margin-left: 8px;
+    }
+    .team-block{
+        padding: 40px 40px !important;
+    }
+    .recruit-block{
+        padding: 40px 40px !important;
+        font-size: 12px !important;
     }
 }
 
