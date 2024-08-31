@@ -141,7 +141,7 @@ To deploy this React project to GitHub Pages, follow these steps:
 
 1. **Prepare for Deployment**:
    - Ensure that your project is up-to-date and all changes are committed.
-   - Make sure your `package.json` is already configured for deployment.
+   - Make sure your `package.json` is already configured for deployment. (It should be configured already, so the below instruction about what do if it is not configured is here just in case something goes wrong)
      - If it is not configured, you need to add a `homepage` field and set up `gh-pages`:
        - Open your `package.json` file.
        - Add the following line near the top: `"homepage": "https://<username>.github.io/<repo-name>"`
