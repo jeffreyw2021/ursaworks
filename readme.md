@@ -1,7 +1,7 @@
 
 # Ursaworks Website Documentation
 
-This website is for the Robomaster team at Washington University in St. Louis, and it's intended to be maintained by team members. Below, you'll find information on the project structure and instructions on how to add, edit, or remove content.
+Welcome to the Ursaworks website repository! This website is for the Robomaster team at Washington University in St. Louis, and it's intended to be maintained by team members. Below, you'll find information on the project structure and instructions on how to add, edit, or remove content.
 
 ## Project Structure
 
@@ -134,5 +134,29 @@ To add a new robot to the website, follow these steps:
 - **Deleting**: Remove the object of the team member you want to delete from the `"team"` array.
 
 ---
+
+## Deploying the React Project to GitHub Pages
+
+To deploy this React project to GitHub Pages, follow these steps:
+
+1. **Prepare for Deployment**:
+   - Ensure that your project is up-to-date and all changes are committed.
+   - Make sure your `package.json` is already configured for deployment. Since you've mentioned this is already set up, you can skip this step.
+
+2. **Build the Project**:
+   - Run `npm run build` to create a production build of the project. This command will generate a `build` directory containing the optimized production files.
+
+3. **Deploy to GitHub Pages**:
+   - Run `npm run deploy`. This command will deploy the contents of the `build` directory to the `gh-pages` branch of your repository.
+   - The website will be published under GitHub Pages, and you can view it using the GitHub Pages URL associated with your repository.
+
+4. **Push Changes**:
+   - After deploying, commit and push any changes to the `main` branch to keep the repository up-to-date.
+
+By following these steps, you can ensure that the Ursaworks website is correctly deployed and accessible via GitHub Pages.
+
+---
+
+By following these guidelines, team members can efficiently manage and update the content of the Ursaworks website. This ensures that the website remains up-to-date and accurately reflects the team's activities and members.
 
 For any issues or questions, please refer to the project’s GitHub issues page or contact a project maintainer. Happy coding! 
