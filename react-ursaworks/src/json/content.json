@@ -1,0 +1,119 @@
+{
+    "intro": "At Ursaworks, our mission is to advance robotics and industry by bringing together students who are passionate about innovation. Our focus is on fostering a collaborative environment where students from any background can develop their skills through competition. We're committed to nurturing talent and promoting hard work to prepare our members for future challenges in technology.",
+    "ourRobot": "Each year, the Robomaster Competition challenges teams to design and build robots for a paintball-like game. Last season, we developed and tested these robots:",
+    
+    "robots":[
+        {
+            "name":"standard",
+            "description":"The Standard is a compact, fast ground robot that fires 17mm pellets at a high rate, dealing and receiving the majority of damage in matches. In our design, we've incorporated a gyroscope to enable the robot's chassis to rotate while maintaining a stable, aiming gimbal. This mechanism reduces the likelihood of hits to our armor, preserving our health count.",
+            "image": "../assets/robots/standard.png"
+        }
+    ],
+    "events":[
+        {
+            "name":"Placeholder Event Name",
+            "location":"city, state",
+            "date":"Jul 09. 2023",
+            "image": "../assets/events/seattleMatch.png"
+        },
+        {
+            "name":"Placeholder Event Name",
+            "location":"city, state",
+            "date":"Jul 09. 2023",
+            "image": "../assets/events/seattleMatch.png"
+        },
+        {
+            "name":"Placeholder Event Name",
+            "location":"city, state",
+            "date":"Jul 09. 2023",
+            "image": "../assets/events/seattleMatch.png"
+        },
+        {
+            "name":"Placeholder Event Name",
+            "location":"city, state",
+            "date":"Jul 09. 2023",
+            "image": "../assets/events/seattleMatch.png"
+        },
+        {
+            "name":"Placeholder Event Name",
+            "location":"city, state",
+            "date":"Jul 09. 2023",
+            "image": "../assets/events/seattleMatch.png"
+        },
+        {
+            "name":"Placeholder Event Name",
+            "location":"city, state",
+            "date":"Jul 09. 2023",
+            "image": "../assets/events/seattleMatch.png"
+        },
+        {
+            "name":"Placeholder Event Name",
+            "location":"city, state",
+            "date":"Jul 09. 2023",
+            "image": "../assets/events/seattleMatch.png"
+        },
+        {
+            "name":"Placeholder Event Name",
+            "location":"city, state",
+            "date":"Jul 09. 2023",
+            "image": "../assets/events/seattleMatch.png"
+        }
+    ],
+    "team":[
+        {
+            "name":"First Last",
+            "position":"position",
+            "image": "../assets/members/memberPlaceholder.png"
+        },
+        {
+            "name":"First Last",
+            "position":"position",
+            "image": "../assets/members/memberPlaceholder.png"
+        },
+        {
+            "name":"First Last",
+            "position":"position",
+            "image": "../assets/members/memberPlaceholder.png"
+        },
+        {
+            "name":"First Last",
+            "position":"position",
+            "image": "../assets/members/memberPlaceholder.png"
+        },
+        {
+            "name":"First Last",
+            "position":"position",
+            "image": "../assets/members/memberPlaceholder.png"
+        },
+        {
+            "name":"First Last",
+            "position":"position",
+            "image": "../assets/members/memberPlaceholder.png"
+        },
+        {
+            "name":"First Last",
+            "position":"position",
+            "image": "../assets/members/memberPlaceholder.png"
+        },
+        {
+            "name":"First Last",
+            "position":"position",
+            "image": "../assets/members/memberPlaceholder.png"
+        },
+        {
+            "name":"First Last",
+            "position":"position",
+            "image": "../assets/members/memberPlaceholder.png"
+        },
+        {
+            "name":"First Last",
+            "position":"position",
+            "image": "../assets/members/memberPlaceholder.png"
+        },
+        {
+            "name":"First Last",
+            "position":"position",
+            "image": "../assets/members/memberPlaceholder.png"
+        }
+    ]
+}
