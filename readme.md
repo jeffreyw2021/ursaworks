@@ -135,6 +135,4 @@ To add a new robot to the website, follow these steps:
 
 ---
 
-By following these guidelines, team members can efficiently manage and update the content of the Ursaworks website. This ensures that the website remains up-to-date and accurately reflects the team's activities and members.
-
 For any issues or questions, please refer to the project’s GitHub issues page or contact a project maintainer. Happy coding! 
