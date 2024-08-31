@@ -141,7 +141,7 @@ To deploy this React project to GitHub Pages, follow these steps:
 
 1. **Prepare for Deployment**:
    - Ensure that your project is up-to-date and all changes are committed.
-   - Make sure your `package.json` is already configured for deployment. Since you've mentioned this is already set up, you can skip this step.
+   - Make sure your `package.json` is already configured for deployment. 
 
 2. **Build the Project**:
    - Run `npm run build` to create a production build of the project. This command will generate a `build` directory containing the optimized production files.
