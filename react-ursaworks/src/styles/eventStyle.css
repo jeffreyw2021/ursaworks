@@ -8,7 +8,8 @@
   width: 100vw;
   height: auto;
   z-index: 3;
-  padding-top: 10rem;
+  padding-top: 8rem;
+  margin-top: 2rem;
 }
 
 .eventMainCard {
@@ -99,7 +100,7 @@
 }
 .eventInfo h5{
   font-weight: 500;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   margin-top: 0.6rem;
   margin-bottom: 0.4rem;
 }
@@ -110,11 +111,11 @@
   column-gap: 0.1rem;
 }
 .eventLocationContent p{
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: white;
 }
 .locationIcon{
-  height: 1rem;
+  height: 1.1rem;
   margin-bottom: 0rem;
 }
 .otherEvents{
@@ -162,18 +163,18 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  column-gap: 0.2rem;
+  column-gap: 0.25rem;
 }
 .otherEventLocation p{
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: #fff;
 }
 .otherEventDate p{
-  font-size: 0.8rem;
+  font-size:0.9rem;
   color: #fff;
 }
 .miniIcon{
-  width: 0.8rem;
+  width: 1rem;
 }
 @media screen and (max-width: 473px){
   .otherEventInfo:nth-last-of-type(2){

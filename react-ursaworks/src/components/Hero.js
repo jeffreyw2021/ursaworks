@@ -1,6 +1,6 @@
 import React from 'react';
 import BearBg from '../assets/logoItems/BearBg.svg';
-import stars from '../assets/logoItems/stars.svg';
+import stars from '../assets/logoItems/starAndBear.svg';
 import '../styles/heroStyle.css';
 
 export default function Hero() {

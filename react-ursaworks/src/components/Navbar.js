@@ -2,16 +2,7 @@ import React from 'react';
 import headerLogo from '../assets/logoItems/headerLogo.svg';
 import '../styles/navbarStyle.css';
 
-export default function Navbar({ activeLink, handleLinkClick }) {
-    const handleScroll = (id) => {
-        handleLinkClick(id); // Update active link state
-
-        const section = document.getElementById(`${id}Block`);
-        if (section) {
-            section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-    };
-
+export default function Navbar({ activeTab }) {
     return (
         <nav className="header">
             <img src={headerLogo} className="headerLogo" alt="Header Logo" />
@@ -19,12 +10,9 @@ export default function Navbar({ activeLink, handleLinkClick }) {
                 {['about', 'events', 'team'].map((id) => (
                     <a
                         key={id}
-                        className={`headerLink ${activeLink === id ? 'active' : ''}`}
-                        onClick={(e) => {
-                            e.preventDefault(); // Prevent default anchor behavior
-                            handleScroll(id);
-                        }}
-                        style={{ cursor: 'pointer' }} // Ensure it's clickable
+                        className={`headerLink ${activeTab === id ? 'active' : ''}`}
+                        href={`#${id}`}
+                        style={{ cursor: 'pointer' }}
                     >
                         {id.toUpperCase()}
                     </a>

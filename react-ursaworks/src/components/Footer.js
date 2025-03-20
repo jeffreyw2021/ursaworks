@@ -5,10 +5,12 @@ import completeLogo from '../assets/logoItems/completeLogo.svg';
 import '../styles/footerStyle.css';
 
 export default function Footer() {
+    const currentYear = new Date().getFullYear() || 2024;
+
     return (
         <footer>
             <div className="footerContent">
-                <p>© 2024 - WashU Ursaworks Robomaster Club</p>
+                <p>© {currentYear} - WashU Ursaworks Robomaster Club</p>
                 <div className="footerLink">
                     <img src={emailIcon} alt="Email" />
                     <a href="mailto:ursaworksrobotics@gmail.com">ursaworksrobotics@gmail.com</a>

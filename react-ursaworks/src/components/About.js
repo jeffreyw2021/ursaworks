@@ -1,6 +1,7 @@
 import React from 'react';
 import loadImage from '../configs/loadImages';
-import content from '../json/content.json';
+import content from "content/content.json";
+
 import '../styles/aboutStyle.css';
 
 export default function About({ aboutRef }) {

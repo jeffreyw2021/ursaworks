@@ -1,6 +1,6 @@
 import React from 'react';
-import Dashboard from '../screens/Dashboard';
+import Main from '../screens/Main';
 
 export default function GlobalController() {
-  return <Dashboard />;
+  return <Main />;
 }
