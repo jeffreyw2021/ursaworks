@@ -1,0 +1,40 @@
+@import url(../App.css);
+
+.bgAnimationCover {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to bottom, #080808 0%, transparent 20%, transparent 100%);
+    z-index: 1;
+    pointer-events: none;
+  }
+  .bgAnimation {
+    position: fixed;
+    width: 200vw;
+    height: 400vh;
+    top: -200vh;
+    left: -50%;
+    background-color: #080808;
+    background-image: 
+      linear-gradient(#222222 0.5px, transparent 0.5px),
+      linear-gradient(90deg, #222222 0.5px, transparent 0.5px);
+    background-size: 1.6rem 1.6rem;
+    transform: perspective(1000px) rotateX(82deg);
+    
+    /* Animation */
+    animation: moveGrid 0.8s linear infinite;
+    pointer-events: none;
+
+    z-index: -1 !important;
+  }
+
+  @keyframes moveGrid {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: 0 -1.6rem; 
+    }
+  }

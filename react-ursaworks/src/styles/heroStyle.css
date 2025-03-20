@@ -1,0 +1,49 @@
+@import url(../App.css);
+
+.hero {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.heroBg {
+    width: 31rem;
+    filter: brightness( 0.4);
+}
+
+.heroContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 2rem;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.stars {
+    width: 24rem;
+    margin-bottom: 0.8rem;
+}
+
+.title {
+    font-size: 5rem;
+    font-weight: 800;
+    background-image: var(--main-grad);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    white-space: nowrap;
+}
+
+.subtitle {
+    color: white;
+    font-weight: 400;
+    font-size: 1.6rem;
+    white-space: nowrap;
+}

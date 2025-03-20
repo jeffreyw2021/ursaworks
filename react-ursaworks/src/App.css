@@ -34,3 +34,7 @@ body {
   scrollbar-width: none;
   scroll-behavior: smooth;
 }
+
+a{
+  text-decoration: none;
+}
