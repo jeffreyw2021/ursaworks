@@ -1,172 +1,135 @@
-
 # Ursaworks Website Documentation
 
-This website is for the Robomaster team at Washington University in St. Louis, and it's intended to be maintained by team members. Below, you'll find information on the project structure and instructions on how to add, edit, or remove content.
-
-## Project Structure
-
-1. **Main Code Folder**: The primary code for the website is located in the `react-ursaworks/src` directory. All references in this document pertain to files and folders within this directory.
-
-2. **Assets Folder**: All images related to robots, events, and team members are stored in `react-ursaworks/src/assets`.
-
-3. **Content JSON**: The website's content is managed through a JSON file located at `react-ursaworks/src/json/content.json`. When you need to change the website's content, this is the file you'll modify.
+This website is for the Robomaster team at Washington University in St. Louis and is maintained by team members. Below, you'll find information on how to update the website's content, including robots, events, and team members.
 
 ---
 
-## Adding a New Robot
+## Project Structure
+1. **Main Code Folder**: The primary code for the website is located in `react-ursaworks/src/`.
+2. **Content Folder**: All content updates should be made in the `content/` directory, located outside the project folder. This folder contains:
+   - `content/assets/` – Stores images for robots, events, and team members.
+   - `content/content.json` – The key content management file for the entire project. The project references `content.json` for arranging all text and images on the website.
+3. **Automated Syncing**:  
+   - When updates are made in the `content/` folder, running `npm start` or `npm run sync` will automatically:
+     - Sync images from `content/assets/` to `src/assets/`.
+     - Sync `src/assets/` to `public/assets/`.
+     - Copy `content/content.json` into the project.
 
-To add a new robot to the website, follow these steps:
+---
 
-1. **Upload the Robot's Image**: Place the image of the new robot in the `react-ursaworks/src/assets` folder.
-
+## Updating Website Content
+### Adding a New Robot
+1. **Upload the Robot's Image**:
+   - Place the image in `content/assets/robots/`.
 2. **Update the JSON File**:
-   - Open `react-ursaworks/src/json/content.json`.
-   - Add a new object to the `"robots"` array. This object should include:
-     - `"name"`: The name of the robot.
-     - `"description"`: A description of the robot.
-     - `"image"`: The file name of the robot's image as it appears in the `assets` folder (without the path).
-
-   Example:
+   - Open `content/content.json` and add a new entry to the `"robots"` array:
    ```json
    {
        "name": "newRobot",
        "description": "Description of the new robot's features and capabilities.",
-       "image": "newRobotImage"
+       "image": "newRobotImage.png"
    }
    ```
+3. **Sync, Preview, and Deploy**:
+   - Run `npm run dev` to sync and start the development server.
+   - Preview changes on `localhost`.
+   - Deploy updates with `npm run deploy`.
 
-3. **Sync and Preview**:
-   - Run the command `npm run dev` to sync the new image to the public folder and start a local development server.
-   - Preview the changes on `localhost` to ensure everything looks correct.
+### Editing a Robot
+1. Open `content/content.json`, locate the robot in `"robots"`, and edit as needed.
+2. Run `npm run dev` to sync and preview.
+3. Deploy if everything looks correct.
 
-4. **Deploy Changes**:
-   - If everything looks good, build the project with `npm run build`.
-   - Deploy the changes using `npm run deploy`, which updates the `gh-pages` branch.
-   - Finally, commit and push the changes to GitHub to update the repository.
-
----
-
-## Editing a Robot's Information
-
-1. **Locate the Robot Object**: In `content.json`, find the robot object you want to edit within the `"robots"` array.
-
-2. **Update the Information**:
-   - Change the `"name"`, `"description"`, or `"image"` as needed. 
-   - Save the file.
-
-3. **Sync, Preview, and Deploy**: Follow the same steps as outlined above to sync, preview, and deploy your changes.
-
----
-
-## Deleting a Robot
-
-1. **Find and Remove the Robot Object**: Locate the robot object in the `"robots"` array that you wish to delete and remove the entire object (the `{}` block containing the robot's details).
-
-2. **Sync, Preview, and Deploy**: Follow the same steps as outlined above to sync, preview, and deploy your changes.
+### Deleting a Robot
+1. Remove the robot's entry from `"robots"` in `content/content.json`.
+2. Delete its image from `content/assets/robots/`.
+3. Run `npm run sync` to clean up the project files.
 
 ---
 
 ## Managing Events
-
 ### Adding a New Event
-
-1. **Upload Event Image**: Place the event image in the `react-ursaworks/src/assets` folder.
-
+1. **Upload the Event Image**:
+   - Place the image in `content/assets/events/`.
 2. **Update the JSON File**:
-   - Open `react-ursaworks/src/json/content.json`.
-   - Add a new object to the `"events"` array. This object should include:
-     - `"name"`: The name of the event.
-     - `"location"`: The location of the event.
-     - `"date"`: The date of the event.
-     - `"image"`: The file name of the event's image as it appears in the `assets` folder (without the path).
-
-   Example:
+   - Open `content/content.json` and add a new entry to `"events"`:
    ```json
    {
        "name": "Sample Event",
        "location": "City, State",
        "date": "MMM DD, YYYY",
-       "image": "eventImageName"
+       "image": "eventImage.png"
    }
    ```
-
-3. **Sync, Preview, and Deploy**: Follow the steps as outlined above to sync, preview, and deploy your changes.
-
-### Event Display Order
-
-- The first two objects in the `"events"` array are considered top events and are displayed prominently on the website.
-- The remaining events are shown as thumbnails.
+3. **Sync, Preview, and Deploy**:
+   - Run `npm run dev`, check `localhost`, then deploy.
 
 ### Editing or Deleting an Event
-
-- **Editing**: Locate the event object in the `"events"` array you wish to edit and modify its details.
-- **Deleting**: Remove the object of the event you want to delete from the `"events"` array.
+- **Editing**: Modify the event details in `content/content.json`.
+- **Deleting**: Remove the event object and delete its image from `content/assets/events/`.
 
 ---
 
 ## Managing Team Members
-
 ### Adding a New Member
-
-1. **Upload Member Image**: Place the member's image in the `react-ursaworks/src/assets` folder.
-
+1. **Upload Member Image**:
+   - Place the image in `content/assets/members/`.
 2. **Update the JSON File**:
-   - Open `react-ursaworks/src/json/content.json`.
-   - Add a new object to the `"team"` array. This object should include:
-     - `"name"`: The name of the team member.
-     - `"position"`: The team member's position or role.
-     - `"image"`: The file name of the member's image as it appears in the `assets` folder (without the path).
-
-   Example:
+   - Open `content/content.json` and add a new entry to `"team"`:
    ```json
    {
        "name": "Jane Doe",
        "position": "Team Lead",
-       "image": "janeDoeImage"
+       "image": "janeDoeImage.png"
    }
    ```
-
-3. **Sync, Preview, and Deploy**: Follow the steps as outlined above to sync, preview, and deploy your changes.
+3. **Sync, Preview, and Deploy**:
+   - Run `npm run dev`, check `localhost`, then deploy.
 
 ### Editing or Deleting a Member
-
-- **Editing**: Locate the team member object in the `"team"` array you wish to edit and modify its details.
-- **Deleting**: Remove the object of the team member you want to delete from the `"team"` array.
-
----
-
-## Deploying the React Project to GitHub Pages
-
-To deploy this React project to GitHub Pages, follow these steps:
-
-1. **Prepare for Deployment**:
-   - Ensure that your project is up-to-date and all changes are committed.
-   - Make sure your `package.json` is already configured for deployment. (It should be configured already, so the below instruction about what do if it is not configured is here just in case something goes wrong)
-     - If it is not configured, you need to add a `homepage` field and set up `gh-pages`:
-       - Open your `package.json` file.
-       - Add the following line near the top: `"homepage": "https://<username>.github.io/<repo-name>"`
-       - Install the `gh-pages` package by running: `npm install gh-pages --save-dev`
-       - Add the following scripts to the `scripts` section in `package.json`:
-         ```json
-         "scripts": {
-           "predeploy": "npm run build",
-           "deploy": "gh-pages -d build"
-         }
-         ```
-       Replace `<username>` with the GitHub username running the current GitHub Pages instance, and `<repo-name>` with the name of this repository.
-
-2. **Build the Project**:
-   - Run `npm run build` to create a production build of the project. This command will generate a `build` directory containing the optimized production files.
-
-3. **Deploy to GitHub Pages**:
-   - Run `npm run deploy`. This command will deploy the contents of the `build` directory to the `gh-pages` branch of your repository.
-   - The website will be published under GitHub Pages, and you can view it using the GitHub Pages URL associated with your repository.
-
-4. **Push Changes**:
-   - After deploying, commit and push any changes to the `main` branch to keep the repository up-to-date.
-
-By following these steps, you can ensure that the Ursaworks website is correctly deployed and accessible via GitHub Pages.
+- **Editing**: Modify details in `content/content.json`.
+- **Deleting**: Remove the entry and delete the image from `content/assets/members/`.
 
 ---
 
-For any issues or questions, please refer to the project’s GitHub issues page or contact a project maintainer. Happy coding! 
+## Syncing Assets & Content
+### Automatic Syncing
+Whenever you start the project or deploy, the system automatically:
+1. Syncs images from `content/assets/` to `src/assets/` (only about, robots, events, and members).
+2. Syncs the entire `src/assets/` to `public/assets/`.
+3. Copies `content/content.json` to the project.
+
+### Manual Syncing
+If changes are made in `content/`, manually sync by running:
+```bash
+npm run sync
+```
+
+---
+
+## Deploying the Website
+To deploy the website to GitHub Pages, follow these steps:
+
+1. **Ensure content is updated**:
+   - Modify `content/assets/` and `content/content.json` as needed.
+   - Run `npm run sync` to update the project files.
+2. **Build the project**:
+   ```bash
+   npm run build
+   ```
+3. **Deploy the project**:
+   ```bash
+   npm run deploy
+   ```
+4. **Push changes to GitHub** to keep everything updated.
+
+---
+
+## Important Notes
+- Do **not** modify `src/assets/` manually. All assets should be updated in `content/assets/`.
+- Do **not** edit `react-ursaworks/src/json/content.json` manually. Instead, modify `content/content.json`, which is the key content management file.
+- Always run `npm run sync` after updating `content/` to ensure the website has the latest content.
+
+---
+
+For any issues, refer to the project's GitHub issues page or contact a maintainer.
