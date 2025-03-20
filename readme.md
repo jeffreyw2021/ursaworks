@@ -8,7 +8,7 @@ This website is for the Robomaster team at Washington University in St. Louis an
 1. **Main Code Folder**: The primary code for the website is located in `react-ursaworks/src/`.
 2. **Content Folder**: All content updates should be made in the `content/` directory, located outside the project folder. This folder contains:
    - `content/assets/` – Stores images for robots, events, and team members.
-   - `content/content.json` – The key content management file for the entire project. The project references `content.json` for arranging all text and images on the website.
+   - `content/content.json` – The key content management file for the entire project. The project references this file for arranging all text and images on the website.
 3. **Automated Syncing**:  
    - When updates are made in the `content/` folder, running `npm start` or `npm run sync` will automatically:
      - Sync images from `content/assets/` to `src/assets/`.
