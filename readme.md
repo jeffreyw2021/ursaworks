@@ -135,8 +135,8 @@ To deploy the website to GitHub Pages, follow these steps:
 ---
 
 ## Important Notes
-- Do **not** modify `src/assets/` manually. All assets should be updated in `content/assets/`.
-- Do **not** edit `react-ursaworks/src/json/content.json` manually. Instead, modify `content/content.json`, which is the key content management file.
+- **DO NOT** modify `src/assets/` manually. All assets should be updated in `content/assets/`.
+- **DO NOT** edit `react-ursaworks/src/json/content.json` manually. Instead, modify `content/content.json`, which is the key content management file.
 - Always run `npm run sync` after updating `content/` to ensure the website has the latest content.
 
 ---
