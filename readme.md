@@ -80,9 +80,9 @@ This website is for the Robomaster team at Washington University in St. Louis an
    - Open `content/content.json` and add a new entry to `"team"`:
    ```json
    {
-       "name": "Firstname Lastname",
+       "name": "Joe Smith",
        "position": "Team Lead",
-       "image": "firstnameLastnameImage.png"
+       "image": "JoeSmithImage.png"
    }
    ```
 3. **Sync, Preview, and Deploy**:
