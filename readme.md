@@ -9,14 +9,13 @@ This website is for the Robomaster team at Washington University in St. Louis an
 2. **Content Folder**: All content updates should be made in the `content/` directory, located outside the project folder. This folder contains:
    - `content/assets/` – Stores images for robots, events, and team members.
    - `content/content.json` – The key content management file for the entire project. The project references this file for arranging all text and images on the website.
-3. **Automated Syncing**:  
-   - When updates are made in the `content/` folder, running `npm start` or `npm run sync` will automatically:
-     - Sync images from `content/assets/` to `src/assets/`.
-     - Sync `src/assets/` to `public/assets/`.
-     - Copy `content/content.json` into the project.
+3. **Syncing with Command Line**:  
+   - When updates are made in the `content/` folder, running `npm start`, `npm run dev`, or `npm run sync` will trigger:
+     - Syncing images from `content/assets/` to `src/assets/`.
+     - Syncing `src/assets/` to `public/assets/`.
+     - Copying `content/content.json` into the project.
 
-
-   ⚠️ **Important**: Updates to images or `content.json` will not be effective unless you run the appropriate command lines (`npm start`, `npm run sync`, or `npm run dev`). **DO NOT** directly update the `content.json` or `content/assets/` in GitHub. 
+   ⚠️ **Important**: Updates to images or `content.json` will not be effective unless you manually trigger syncing using command lines (`npm start`, `npm run sync`, or `npm run dev`). **DO NOT** directly update `content.json` or `content/assets/` in GitHub. 
 
 ---
 
@@ -96,17 +95,24 @@ This website is for the Robomaster team at Washington University in St. Louis an
 ---
 
 ## Syncing Assets & Content
-### Automatic Syncing
-Whenever you start the project or deploy, the system automatically:
-1. Syncs images from `content/assets/` to `src/assets/` (only about, robots, events, and members).
-2. Syncs the entire `src/assets/` to `public/assets/`.
-3. Copies `content/content.json` to the project.
-
-### Manual Syncing
-If changes are made in `content/`, manually sync by running:
+### Syncing with Command Line
+Syncing is **not automatic**. It must be triggered using the command line. Running any of the following commands will ensure the latest updates:
 ```bash
 npm run sync
+npm run dev
+npm run start
 ```
+These commands will:
+1. Sync images from `content/assets/` to `src/assets/` (only about, robots, events, and members).
+2. Sync the entire `src/assets/` to `public/assets/`.
+3. Copy `content/content.json` to the project.
+
+## How Syncing Works
+The script `syncAssets.js` is responsible for syncing assets and content. It performs the following steps:
+
+1. Syncs only **specific asset categories** (`about`, `events`, `members`, `robots`) from `content/assets/` to `src/assets/`.
+2. Syncs the entire `src/assets/` folder to `public/assets/`.
+3. Removes outdated files from `src/assets/` and `public/assets/` to keep the project clean.
 
 ---
 
