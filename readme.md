@@ -15,7 +15,8 @@ This website is for the Robomaster team at Washington University in St. Louis an
      - Sync `src/assets/` to `public/assets/`.
      - Copy `content/content.json` into the project.
 
-   > ⚠️ **Important**: Updates to images or `content.json` will not be effective unless you run the appropriate command lines (`npm start`, `npm run sync`, or `npm run dev`).
+
+   ⚠️ **Important**: Updates to images or `content.json` will not be effective unless you run the appropriate command lines (`npm start`, `npm run sync`, or `npm run dev`).
 
 ---
 
