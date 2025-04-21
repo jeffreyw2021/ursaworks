@@ -24,7 +24,7 @@
     transform: perspective(1000px) rotateX(82deg);
     
     /* Animation */
-    animation: moveGrid 0.8s linear infinite;
+    animation: moveGrid 2s linear infinite;
     pointer-events: none;
 
     z-index: -1 !important;
