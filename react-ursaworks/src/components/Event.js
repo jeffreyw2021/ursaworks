@@ -1,6 +1,6 @@
 import React from 'react';
 import loadImage from '../configs/loadImages';
-import content from "content/content.json";
+import content from "../content.json";
 import locationIcon from '../assets/logoItems/locationIcon.svg';
 import calendarIcon from '../assets/logoItems/calendarIcon.svg';
 import '../styles/eventStyle.css';
