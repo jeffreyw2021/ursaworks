@@ -17,7 +17,13 @@ export default function Event({ eventsRef }) {
                 <div className="robomaster">
                     <h2 className="sectionTitle">Our Events</h2>
                     <p className="robomasterDesc">
-                        The <strong>RoboMaster University Championship</strong> is an annual global robotics contest with 200+ universities. Hosted by DJI, it empowers students to showcase skills and push boundaries. Robots in a grand arena tackle challenges, controlled by operators using onboard cameras. Matches involve disarming opponents' robots and bases, calculating damage through pressure-sensitive plates from launched projectiles. The event applies classroom-taught skills in computer vision, embedded systems, and mechanical design practically.
+                        We have two primary events that we attend each year.
+                    </p>
+                    <p className="robomasterDesc">
+                        <strong>RoboMaster North America (RMNA)</strong> is the premier collegiate robotics competition in the region, bringing together top university teams to design, build, and battle advanced robots in esports-style matches. Inspired by DJI’s global RoboMaster competition in China, RMNA showcases cutting-edge engineering, teamwork, and strategy on an international stage. Each year, the event pushes students to combine mechanical design, computer vision, embedded systems, and AI to compete in high-energy matches that blend robotics with the thrill of competitive gaming.
+                    </p>
+                    <p className="robomasterDesc">
+                        The <strong>Midwest RoboMaster Regional</strong> serves as a key qualifier and community hub for universities across the central United States. Known for its collaborative spirit and fierce competition, the Midwest event provides new and veteran teams alike the opportunity to test their robots, refine strategies, and gain valuable match experience before the North America championship. More than just a stepping stone, it has become a showcase of innovation and creativity, highlighting the technical talent and dedication of Midwest engineering programs.
                     </p>
                     <a className="moreAboutLink" href="https://aruw.org/what-is-robomaster" alt="More About Robomasters">
                         <span>More About Robomasters</span>

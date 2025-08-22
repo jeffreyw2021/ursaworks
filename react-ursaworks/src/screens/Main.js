@@ -3,7 +3,7 @@ import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import About from '../components/About';
 import Event from '../components/Event';
-import Team from '../components/Team';
+// import Team from '../components/Team';
 import Footer from '../components/Footer';
 import '../styles/dashboardStyle.css';
 import '../styles/bgAnimationStyle.css';
@@ -16,7 +16,7 @@ export default function Main() {
     const heroRef = useRef(null);
     const aboutRef = useRef(null);
     const eventsRef = useRef(null);
-    const teamsRef = useRef(null);
+    // const teamsRef = useRef(null);
 
     // Observe Hero Section for opacity effect
     useEffect(() => {
@@ -38,8 +38,8 @@ export default function Main() {
     useEffect(() => {
         const sections = [
             { id: 'about', ref: aboutRef },
-            { id: 'events', ref: eventsRef },
-            { id: 'team', ref: teamsRef }
+            { id: 'events', ref: eventsRef }
+            // { id: 'team', ref: teamsRef }
         ];
 
         const observer = new IntersectionObserver(
@@ -80,7 +80,7 @@ export default function Main() {
                 <div id="hero" ref={heroRef} />
                 <div id="about" ref={aboutRef}><About /></div>
                 <div id="events" ref={eventsRef}><Event /></div>
-                <div id="team" ref={teamsRef}><Team /></div>
+                {/* <div id="team" ref={teamsRef}><Team /></div> */}
                 <Footer />
             </div>
 

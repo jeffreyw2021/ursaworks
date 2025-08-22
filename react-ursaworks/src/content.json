@@ -4,59 +4,57 @@
   "aboutImage": "seattleMatch.png",
   "robots": [
     {
-      "name": "standard",
-      "description": "The Standard is a compact, fast ground robot that fires 17mm pellets at a high rate, dealing and receiving the majority of damage in matches. In our design, we've incorporated a gyroscope to enable the robot's chassis to rotate while maintaining a stable, aiming gimbal. This mechanism reduces the likelihood of hits to our armor, preserving our health count.",
-      "image": "standard.png"
+      "name": "Hero",
+      "description": "The Hero is the powerhouse of the lineup, armed with heavier weapons that deal more damage per shot than any other unit. Designed to dominate direct confrontations, the Hero often leads offensive maneuvers and forces opponents to respect its presence on the field. Its higher survivability and firepower make it the focal point of many strategies, with teams relying on it to break stalemates and secure key objectives.",
+      "image": "hero.png"
+    },
+    {
+      "name": "Sentry",
+      "description": "The Sentry is a fully autonomous robot that uses vision algorithms and onboard processing to track, target, and fire at opponents without a human driver. In the 3v3 format, it roams within a restricted zone, providing constant automated pressure and forcing enemy robots to adapt their movements. While it lacks the adaptability of human-driven units, its relentless precision and endurance make it a valuable asset that punishes careless advances and supports teammates through consistent suppression fire.",
+      "image": "sentry.png"
+    },
+    {
+      "name": "Infantry",
+      "description": "The Infantry are the most versatile members of the team, combining mobility, adaptability, and solid firepower. Their agility allows them to contest map resources, flank opponents, and coordinate attacks alongside the Hero. With skilled drivers, Infantry can shift quickly between offense and defense, making them the backbone of the 3v3 match. Because they are often fielded in multiples, their collective performance heavily influences the pace and outcome of each round.",
+      "image": "infantry.png"
     }
   ],
   "events": [
     {
-      "name": "Placeholder Event Name",
-      "location": "city, state",
-      "date": "Jul 09. 2023",
-      "image": "seattleMatch.png"
+      "name": "RMNA 2025",
+      "location": "San Diego, CA",
+      "date": "Jun 24. 2025",
+      "image": "2025RMNA.jpg"
     },
     {
-      "name": "Placeholder Event Name",
-      "location": "city, state",
-      "date": "Jul 09. 2023",
-      "image": "seattleMatch.png"
+      "name": "Midwest 2025",
+      "location": "Purdue University, IN",
+      "date": "Apr 06. 2025",
+      "image": "2025midwest.jpg"
     },
     {
-      "name": "Placeholder Event Name",
-      "location": "city, state",
+      "name": "RMNA 2024",
+      "location": "San Diego, CA",
       "date": "Jul 09. 2023",
-      "image": "seattleMatch.png"
+      "image": "2024RMNA.png"
     },
     {
-      "name": "Placeholder Event Name",
-      "location": "city, state",
+      "name": "Midwest 2024",
+      "location": "Purdue University, IN",
       "date": "Jul 09. 2023",
-      "image": "seattleMatch.png"
+      "image": "2024midwest.jpg"
     },
     {
-      "name": "Placeholder Event Name",
-      "location": "city, state",
+      "name": "RMNA 2023",
+      "location": "San Diego, CA",
       "date": "Jul 09. 2023",
-      "image": "seattleMatch.png"
+      "image": "2023RMNA.jpg"
     },
     {
-      "name": "Placeholder Event Name",
-      "location": "city, state",
+      "name": "Midwest 2023",
+      "location": "Purdue University, IN",
       "date": "Jul 09. 2023",
-      "image": "seattleMatch.png"
-    },
-    {
-      "name": "Placeholder Event Name",
-      "location": "city, state",
-      "date": "Jul 09. 2023",
-      "image": "seattleMatch.png"
-    },
-    {
-      "name": "Placeholder Event Name",
-      "location": "city, state",
-      "date": "Jul 09. 2023",
-      "image": "seattleMatch.png"
+      "image": "2023midwest.jpg"
     }
   ],
   "team": [
