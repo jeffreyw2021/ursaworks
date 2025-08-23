@@ -1,7 +1,7 @@
 {
   "intro": "At Ursaworks, our mission is to advance robotics and industry by bringing together students who are passionate about innovation. Our focus is on fostering a collaborative environment where students from any background can develop their skills through competition. We're committed to nurturing talent and promoting hard work to prepare our members for future challenges in technology.",
   "ourRobot": "Each year, the Robomaster Competition challenges teams to design and build robots for a paintball-like game. Last season, we developed and tested these robots:",
-  "aboutImage": "seattleMatch.png",
+  "aboutImage": "frontPage.png",
   "robots": [
     {
       "name": "Hero",

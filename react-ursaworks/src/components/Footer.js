@@ -17,10 +17,10 @@ export default function Footer() {
                 </div>
                 <div className="footerLink">
                     <img src={insIcon} alt="Instagram" />
-                    <a href="https://www.instagram.com/ursaworks.robotics/">ursaworks.robotics</a>
+                    <a href="https://www.instagram.com/washu.ursaworks/">washu.ursaworks</a>
                 </div>
             </div>
-            <img src={completeLogo} className="completeLogo" />
+            <img src={completeLogo} className="completeLogo" alt="Ursa Works Complete Logo" />
         </footer>
     );
 }
