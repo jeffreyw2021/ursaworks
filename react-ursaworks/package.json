@@ -1,7 +1,7 @@
 {
   "name": "react-ursaworks",
   "version": "0.1.0",
-  "homepage": "https://jeffreyw2021.github.io/ursaworks/",
+  "homepage": ".",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.6.0",
