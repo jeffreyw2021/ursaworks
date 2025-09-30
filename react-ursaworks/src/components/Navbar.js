@@ -7,7 +7,7 @@ export default function Navbar({ activeTab }) {
         <nav className="header">
             <img src={headerLogo} className="headerLogo" alt="Header Logo" />
             <div className="right">
-                {['about', 'events', 'team'].map((id) => (
+                {['about', 'events'].map((id) => (
                     <a
                         key={id}
                         className={`headerLink ${activeTab === id ? 'active' : ''}`}
@@ -19,7 +19,7 @@ export default function Navbar({ activeTab }) {
                 ))}
                 <a
                     className="JoinusLink"
-                    href="https://ursaworks.larksuite.com/share/base/form/shrusDP9YdSlPynRzednBPM0s9P"
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSdA6wetVhaKAaOyRvP9hzwuNKt1eTfAjNX4nF_CTLxj_yEvfw/viewform"
                     target="_blank"
                     rel="noopener noreferrer"
                 >

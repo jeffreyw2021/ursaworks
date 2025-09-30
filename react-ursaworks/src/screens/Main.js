@@ -20,6 +20,7 @@ export default function Main() {
 
     // Observe Hero Section for opacity effect
     useEffect(() => {
+        const currentHeroRef = heroRef.current;
         const observer = new IntersectionObserver(
             ([entry]) => {
                 setHeroOpacity(entry.intersectionRatio);
@@ -27,10 +28,10 @@ export default function Main() {
             { threshold: Array.from({ length: 11 }, (_, i) => i * 0.1) }
         );
 
-        if (heroRef.current) observer.observe(heroRef.current);
+        if (currentHeroRef) observer.observe(currentHeroRef);
 
         return () => {
-            if (heroRef.current) observer.unobserve(heroRef.current);
+            if (currentHeroRef) observer.unobserve(currentHeroRef);
         };
     }, []);
 
@@ -47,14 +48,14 @@ export default function Main() {
                 let maxVisible = { id: null, ratio: 0 };
 
                 entries.forEach((entry) => {
-                    if (entry.intersectionRatio > maxVisible.ratio) {
+                    if (entry.intersectionRatio > maxVisible.ratio && entry.intersectionRatio > 0.1) {
                         maxVisible = { id: entry.target.id, ratio: entry.intersectionRatio };
                     }
                 });
 
                 if (maxVisible.id) setActiveTab(maxVisible.id);
             },
-            { threshold: [0.2, 0.4, 0.6, 0.8, 1.0], rootMargin: '0px 0px -50% 0px' } // Adjust rootMargin if needed
+            { threshold: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0], rootMargin: '-10% 0px -10% 0px' } // Adjust rootMargin if needed
         );
 
         sections.forEach(({ ref }) => {

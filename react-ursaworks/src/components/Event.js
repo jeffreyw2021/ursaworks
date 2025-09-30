@@ -25,7 +25,7 @@ export default function Event({ eventsRef }) {
                     <p className="robomasterDesc">
                         The <strong>Midwest RoboMaster Regional</strong> serves as a key qualifier and community hub for universities across the central United States. Known for its collaborative spirit and fierce competition, the Midwest event provides new and veteran teams alike the opportunity to test their robots, refine strategies, and gain valuable match experience before the North America championship. More than just a stepping stone, it has become a showcase of innovation and creativity, highlighting the technical talent and dedication of Midwest engineering programs.
                     </p>
-                    <a className="moreAboutLink" href="https://aruw.org/what-is-robomaster" alt="More About Robomasters">
+                    <a className="moreAboutLink" href="https://www.robomasterna.com/" alt="More About Robomasters">
                         <span>More About Robomasters</span>
                         <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
                     </a>
