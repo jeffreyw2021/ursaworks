@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Overview
 
-Marketing/landing site for **Ursaworks**, the RoboMaster team at Washington University in St. Louis. Single-page React site (Create React App) deployed to GitHub Pages. Content (mission text, robots, events) is data-driven from a JSON file plus image assets.
+Marketing/landing site for **Ursaworks**, the RoboMaster team at Washington University in St. Louis. Single-page React site (Vite) deployed to GitHub Pages. Content (mission text, robots, events) is data-driven from a JSON file plus image assets.
 
 ## Layout
 
@@ -17,15 +17,16 @@ The git repo root contains two things:
 Run from `react-ursaworks/`:
 
 ```bash
-npm install        # also symlinks ../content into node_modules via postinstall
-npm run dev        # sync assets + start CRA dev server (http://localhost:3000)
-npm start          # same as dev
+npm install        # installs deps
+npm run dev        # sync assets + start Vite dev server (http://localhost:3000)
+npm start          # alias of dev
 npm run sync       # run syncAssets.js only (copy images, no server)
-npm run build      # sync + production build into build/
+npm run build      # sync + Vite production build into build/
+npm run preview    # serve the built build/ folder locally (http://localhost:4173)
 npm run deploy     # build + publish build/ to GitHub Pages (gh-pages)
-npm test           # CRA/Jest watch mode
-npm test -- App.test.js            # run a single test file
-CI=true npm test                   # run tests once (non-watch)
+npm test           # Vitest (watch mode); add -- --run for a single pass
+npm test -- --run src/App.test.jsx   # run one test file once
+npm run lint       # ESLint (flat config)
 ```
 
 ## Asset sync (`syncAssets.js`)
@@ -48,5 +49,7 @@ Each robot/event/member entry references an image by filename (e.g. `"image": "h
 ## App structure
 
 `App.js` → `configs/GlobalController.js` → `screens/Main.js` is the only rendered path. `Main.js` composes the single page from `components/` (`Navbar`, `Hero`, `About`, `Event`, `Footer`) and drives the active-nav-tab highlight and hero fade via `IntersectionObserver`. Each component pairs with a stylesheet in `src/styles/`.
+
+`src/configs/loadImages.js` resolves images via Vite's `import.meta.glob` (not webpack `require.context`).
 
 **Dormant code — not wired into the app:** `screens/Management.js`, `apis/apiFunctions.js` (a CRUD admin panel against a `PLACEHOLDER_ENDPOINT`), and `components/Team.js` (the team section is commented out in `Main.js`). Don't assume these run; check `Main.js` before relying on them.
