@@ -44,12 +44,12 @@ npm run lint       # ESLint (flat config)
 
 > Note: `readme.md` describes an older workflow where text lived in `content/content.json` and was synced into the app. That file no longer exists and `syncAssets.js` does **not** copy any JSON — only images. Treat `src/content.json` as authoritative; ignore the readme's JSON-sync instructions (its image instructions are still accurate).
 
-Each robot/event/member entry references an image by filename (e.g. `"image": "hero.png"`); the matching file must exist in the corresponding `content/assets/<category>/` folder. Components resolve these at runtime via `configs/loadImages.js`, which uses `require.context('../assets', ...)` — so a referenced image only resolves if it has been synced into `src/assets/`.
+Each robot/event/member entry references an image by filename (e.g. `"image": "hero.png"`); the matching file must exist in the corresponding `content/assets/<category>/` folder. Components resolve these at runtime via `configs/loadImages.js`, which uses `import.meta.glob` — so a referenced image only resolves if it has been synced into `src/assets/`.
 
 ## App structure
 
-`App.js` → `configs/GlobalController.js` → `screens/Main.js` is the only rendered path. `Main.js` composes the single page from `components/` (`Navbar`, `Hero`, `About`, `Event`, `Footer`) and drives the active-nav-tab highlight and hero fade via `IntersectionObserver`. Each component pairs with a stylesheet in `src/styles/`.
+`App.jsx` → `configs/GlobalController.jsx` → `screens/Main.jsx` is the only rendered path. `Main.jsx` composes the single page from `components/` (`Navbar`, `Hero`, `About`, `Event`, `Footer`) and drives the active-nav-tab highlight and hero fade via `IntersectionObserver`. Each component pairs with a stylesheet in `src/styles/`.
 
 `src/configs/loadImages.js` resolves images via Vite's `import.meta.glob` (not webpack `require.context`).
 
-**Dormant code — not wired into the app:** `screens/Management.js`, `apis/apiFunctions.js` (a CRUD admin panel against a `PLACEHOLDER_ENDPOINT`), and `components/Team.js` (the team section is commented out in `Main.js`). Don't assume these run; check `Main.js` before relying on them.
+**Dormant code — not wired into the app:** `screens/Management.jsx`, `apis/apiFunctions.js` (a CRUD admin panel against a `PLACEHOLDER_ENDPOINT`), and `components/Team.jsx` (the team section is commented out in `Main.jsx`). Don't assume these run; check `Main.jsx` before relying on them.
