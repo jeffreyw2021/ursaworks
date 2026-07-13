@@ -15,41 +15,29 @@
     "fs-extra": "^11.2.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "sync": "node syncAssets.js",
-    "dev": "node syncAssets.js && react-scripts start",
-    "start": "node syncAssets.js && react-scripts start",
-    "build": "node syncAssets.js && react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
+    "dev": "node syncAssets.js && vite",
+    "start": "node syncAssets.js && vite",
+    "build": "node syncAssets.js && vite build",
+    "preview": "vite preview",
+    "test": "vitest",
+    "lint": "eslint .",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "postinstall": "ln -sf $(pwd)/content $(pwd)/node_modules/content"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "deploy": "gh-pages -d build"
   },
   "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@eslint/js": "^9.13.0",
+    "@vitejs/plugin-react": "^4.3.0",
+    "eslint": "^9.13.0",
+    "eslint-plugin-react": "^7.37.0",
+    "eslint-plugin-react-hooks": "^5.0.0",
     "gh-pages": "^6.1.1",
-    "typescript": "^4.9.5"
+    "globals": "^15.11.0",
+    "jsdom": "^25.0.0",
+    "vite": "^6.0.0",
+    "vitest": "^2.1.0"
   }
 }
