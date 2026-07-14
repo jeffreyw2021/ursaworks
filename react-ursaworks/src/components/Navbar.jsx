@@ -5,7 +5,9 @@ import '../styles/navbarStyle.css';
 export default function Navbar({ activeTab }) {
     return (
         <nav className="header">
-            <img src={headerLogo} className="headerLogo" alt="Header Logo" />
+            <button className="headerLogoContainer">
+                <img src={headerLogo} className="headerLogo" alt="Header Logo" />
+            </button>
             <div className="right">
                 {['about', 'events'].map((id) => (
                     <a
