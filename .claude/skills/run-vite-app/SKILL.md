@@ -9,6 +9,28 @@ This is a single-page React site built with Vite. All commands run from
 `react-ursaworks/`, not the repo root — `cd` there first (or prefix every
 command with `cd react-ursaworks &&`).
 
+## First: make sure you're on the latest main
+
+Before building, previewing, or verifying anything, confirm you're testing
+current code — not a stale checkout that never pulled main. A green build on
+an out-of-date tree tells you nothing.
+
+```bash
+git fetch origin
+git status -sb                       # shows "ahead/behind" vs the upstream branch
+```
+
+- **On `react-ursaworks` (main):** if it's behind origin, `git pull --ff-only`
+  before building. If `--ff-only` fails, the branch has diverged — stop and ask
+  rather than force-updating.
+- **On a feature branch:** check it isn't behind `origin/react-ursaworks`
+  (`git log --oneline HEAD..origin/react-ursaworks`). If main has moved on,
+  merge/rebase it in first so you're building against the same code that will
+  ship, then continue.
+
+If there's uncommitted work that a pull/checkout would clobber, stop and ask
+how to handle it — don't stash or discard on your own.
+
 ## Before anything: asset sync
 
 `dev`, `start`, and `build` all run `syncAssets.js` automatically, which
