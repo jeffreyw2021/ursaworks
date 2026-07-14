@@ -15,18 +15,6 @@ export default function About({ aboutRef }) {
                 </div>
                 <img src={loadImage('about', content.aboutImage)} alt="About" className="aboutImage" />
             </div>
-            <div className="ourRobot">
-                <h2 className="sectionTitle">Types of Robots</h2>
-                {content.robots.map((robot, index) => (
-                    <div className="robot" key={index}>
-                         <img src={loadImage('robots', robot.image)} alt={robot.name} className="robotImage" />
-                        <div className="robotDesc">
-                            <h3>{robot.name}</h3>
-                            <p>{robot.description}</p>
-                        </div>
-                    </div>
-                ))}
-            </div>
         </div>
     );
 }

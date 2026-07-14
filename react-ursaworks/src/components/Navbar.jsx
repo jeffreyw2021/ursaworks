@@ -10,7 +10,7 @@ export default function Navbar() {
                 <img src={headerLogo} className="headerLogo" alt="Header Logo" />
             </Link>
             <div className="right">
-                {[['about', 'ABOUT'], ['events', 'EVENTS']].map(([path, label]) => (
+                {[['about', 'ABOUT'], ['events', 'EVENTS'], ['robots', 'ROBOTS']].map(([path, label]) => (
                     <NavLink
                         key={path}
                         to={`/${path}`}

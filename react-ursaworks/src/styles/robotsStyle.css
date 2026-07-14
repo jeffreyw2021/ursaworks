@@ -1,47 +1,15 @@
 @import url(../App.css);
 
-
-#aboutBlock {
+#robotsBlock {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
     width: 100vw;
     height: auto;
+    z-index: 3;
     padding: 6.4rem 4rem;
     padding-top: 10rem;
-    display: flex;
-    flex-direction: column;
-    gap: 12rem;
-    justify-content: flex-start;
-    align-items: flex-start;
-}
-
-.ourMission{
-    width: 100%;
-    display: flex;
-    gap: 2rem;
-    justify-content: flex-start;
-    align-items: flex-start;
-}
-.aboutLeft{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-    row-gap: 1rem;
-    width: 100%;
-    min-width: 30%;
-}
-
-.aboutDesc{
-    color: #cdcdcd;
-    font-size: 1.6rem;
-    font-weight: 300;
-    line-height: 1.44;
-}
-
-.aboutImage{
-    width: 60%;
-    height: 100%;
-    border-radius: 0.4rem;
-    object-fit: cover;
 }
 
 .ourRobot{
@@ -93,14 +61,6 @@
 
 @media (max-width: 955px) {
 
-    .aboutLeft {
-        width: 100%;
-    }
-
-    .aboutDesc{
-        font-size: 1.4rem;
-    }
-
     .robotDesc h3{
         font-size: 1.8rem;
     }
@@ -112,11 +72,10 @@
 
 @media (max-width: 758px) {
 
-    .ourMission{
+    .robot{
         flex-direction: column;
-    }
-    .aboutImage {
-        width: 100%;
+        align-items: center;
+        gap: 2rem;
     }
 
     .robot{

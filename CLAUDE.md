@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Overview
 
-Marketing/landing site for **Ursaworks**, the RoboMaster team at Washington University in St. Louis. Single-page React site (Vite) deployed to GitHub Pages. Content (mission text, robots, events) is data-driven from a JSON file plus image assets.
+Marketing/landing site for **Ursaworks**, the RoboMaster team at Washington University in St. Louis. React SPA (Vite) with client-side routing (`react-router-dom`), deployed to GitHub Pages on a custom domain. Content (mission text, robots, events) is data-driven from a JSON file plus image assets.
 
 ## Layout
 
@@ -48,8 +48,18 @@ Each robot/event/member entry references an image by filename (e.g. `"image": "h
 
 ## App structure
 
-`App.jsx` → `configs/GlobalController.jsx` → `screens/Main.jsx` is the only rendered path. `Main.jsx` composes the single page from `components/` (`Navbar`, `Hero`, `About`, `Event`, `Footer`) and drives the active-nav-tab highlight and hero fade via `IntersectionObserver`. Each component pairs with a stylesheet in `src/styles/`.
+`App.jsx` → `configs/GlobalController.jsx` sets up the router. `GlobalController` renders a `<BrowserRouter>` with a `ScrollToTop` helper (resets scroll on navigation) and a `components/Layout.jsx` parent route that provides the shared chrome — `Navbar`, `Footer`, the `bgAnimation` grid, and an `<Outlet/>`. Child routes:
+
+- `/` → `pages/Home.jsx` (renders `Hero`; owns the scroll-linked hero fade via `IntersectionObserver`)
+- `/about` → `pages/AboutPage.jsx` (`components/About`)
+- `/events` → `pages/EventsPage.jsx` (`components/Event`)
+- `/robots` → `pages/RobotsPage.jsx` (`components/Robots`)
+- `*` → redirect to `/`
+
+`Navbar` uses `NavLink` for active-tab highlighting (route-driven, not scroll-driven) and links the logo home. The three content pages (`About`, `Event`, `Robots`) share a `.infoBlock` container and are aligned to a uniform `padding-top: 10rem` so their section titles sit at the same height below the fixed navbar. Each component pairs with a stylesheet in `src/styles/`.
 
 `src/configs/loadImages.js` resolves images via Vite's `import.meta.glob` (not webpack `require.context`).
 
-**Dormant code — not wired into the app:** `screens/Management.jsx`, `apis/apiFunctions.js` (a CRUD admin panel against a `PLACEHOLDER_ENDPOINT`), and `components/Team.jsx` (the team section is commented out in `Main.jsx`). Don't assume these run; check `Main.jsx` before relying on them.
+**GitHub Pages routing:** clean paths require `base: '/'` in `vite.config.mjs` (site is served at the custom-domain root, see `public/CNAME`) plus a `public/404.html` SPA-redirect shim and a companion restore snippet in `index.html`. The 404 shim only activates on live Pages — local `dev`/`preview` have their own SPA fallback.
+
+**Dormant code — not wired into the app:** `screens/Management.jsx`, `apis/apiFunctions.js` (a CRUD admin panel against a `PLACEHOLDER_ENDPOINT`), and `components/Team.jsx` (has no route). Don't assume these run; check `GlobalController.jsx` for what's actually routed. (`screens/Main.jsx`, the old single-page composition, was removed in the routing refactor.)
