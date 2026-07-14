@@ -1,0 +1,47 @@
+name: Deploy to GitHub Pages
+
+# Auto-deploy whenever react-ursaworks (the production branch) changes.
+# Can also be run manually from the Actions tab.
+on:
+  push:
+    branches: [react-ursaworks]
+  workflow_dispatch:
+
+# Prevent overlapping deploys from stepping on each other.
+concurrency:
+  group: pages-deploy
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # needed to push the built site to the gh-pages branch
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: react-ursaworks/package-lock.json
+
+      # syncAssets.js reads from ../content/assets, so it needs the full repo
+      # checkout above. build outputs to react-ursaworks/build (see vite.config.mjs).
+      - name: Install dependencies
+        working-directory: react-ursaworks
+        run: npm ci
+
+      - name: Build
+        working-directory: react-ursaworks
+        run: npm run build
+
+      - name: Publish to gh-pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: react-ursaworks/build
+          # public/CNAME is copied into build/ by Vite, so the custom domain
+          # (ursaworks.club) is preserved on each deploy.
