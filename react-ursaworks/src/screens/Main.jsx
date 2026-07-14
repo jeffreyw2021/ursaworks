@@ -85,7 +85,9 @@ export default function Main() {
                 <Footer />
             </div>
 
-            <div className="bgAnimation" />
+            <div className="bgAnimation">
+                <div className="bgAnimationGrid" />
+            </div>
         </div>
     );
 }
