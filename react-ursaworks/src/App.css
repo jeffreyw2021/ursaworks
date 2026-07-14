@@ -17,7 +17,6 @@ font-family: "Inter", sans-serif;
   --white: #ffffff;
   --main-grad: linear-gradient(20deg, #E87ABA 0%, #C871C7 35%, #605DDC 100%);
   font-family: "Roboto", sans-serif;
-  cursor: pointer;
 }
 
 html {
