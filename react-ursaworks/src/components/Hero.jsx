@@ -8,8 +8,8 @@ export default function Hero() {
             {/* <img src={BearBg} className="heroBg" alt="Background" /> */}
             <div className="heroContent">
                 <img src={stars} className="stars" alt="Stars" />
-                <h1 className="title">URSAWORKS ROBOMASTER CLUB</h1>
-                <h2 className="subtitle">From Washington University in St.Louis</h2>
+                <h1 className="title">URSAWORKS CLUB</h1>
+                <h2 className="subtitle">From Washington University in St. Louis</h2>
             </div>
         </div>
     );
