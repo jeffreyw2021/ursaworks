@@ -1,23 +1,23 @@
 import React from 'react';
+import { Link, NavLink } from 'react-router-dom';
 import headerLogo from '../assets/logoItems/headerLogo.svg';
 import '../styles/navbarStyle.css';
 
-export default function Navbar({ activeTab }) {
+export default function Navbar() {
     return (
         <nav className="header">
-            <button className="headerLogoContainer">
+            <Link to="/" className="headerLogoContainer">
                 <img src={headerLogo} className="headerLogo" alt="Header Logo" />
-            </button>
+            </Link>
             <div className="right">
-                {['about', 'events'].map((id) => (
-                    <a
-                        key={id}
-                        className={`headerLink ${activeTab === id ? 'active' : ''}`}
-                        href={`#${id}`}
-                        style={{ cursor: 'pointer' }}
+                {[['about', 'ABOUT'], ['events', 'EVENTS']].map(([path, label]) => (
+                    <NavLink
+                        key={path}
+                        to={`/${path}`}
+                        className={({ isActive }) => `headerLink ${isActive ? 'active' : ''}`}
                     >
-                        {id.toUpperCase()}
-                    </a>
+                        {label}
+                    </NavLink>
                 ))}
                 <a
                     className="JoinusLink"
