@@ -21,7 +21,7 @@ export default function Navbar() {
                 ))}
                 <a
                     className="JoinusLink"
-                    href="https://docs.google.com/forms/d/e/1FAIpQLSdA6wetVhaKAaOyRvP9hzwuNKt1eTfAjNX4nF_CTLxj_yEvfw/viewform"
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSeLZA5S6mubtBZEqAkaxPZ_qtcPbZ42d1Mc69lE729pCAPCBQ/viewform?usp=dialog"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
