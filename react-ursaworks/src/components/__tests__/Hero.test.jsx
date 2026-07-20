@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import { useRef } from 'react';
-import Hero from './Hero';
-import ScrollContainerContext from '../configs/ScrollContainerContext';
+import Hero from '../Hero';
+import ScrollContainerContext from '../../configs/ScrollContainerContext';
 
 // Hero reads the scroll container from context (Layout provides it in the app).
 function Harness() {

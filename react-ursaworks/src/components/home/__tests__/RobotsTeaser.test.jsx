@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
-import RobotsTeaser from './RobotsTeaser';
-import content from '../../content.json';
+import RobotsTeaser from '../RobotsTeaser';
+import content from '../../../content.json';
 
 test('renders every robot name and a link to /robots', () => {
     render(<RobotsTeaser />, { wrapper: MemoryRouter });

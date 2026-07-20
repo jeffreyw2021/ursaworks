@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
-import EventTeaser from './EventTeaser';
-import content from '../../content.json';
+import EventTeaser from '../EventTeaser';
+import content from '../../../content.json';
 
 test('renders the latest event with a link to /events', () => {
     render(<EventTeaser />, { wrapper: MemoryRouter });

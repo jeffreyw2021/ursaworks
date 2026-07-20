@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import JoinCta from './JoinCta';
+import JoinCta from '../JoinCta';
 
 test('renders the join call-to-action with a mailto link', () => {
     render(<JoinCta />);

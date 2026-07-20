@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react';
 import { useContext, useEffect, useState } from 'react';
 import { MemoryRouter, Routes, Route } from 'react-router-dom';
-import Layout from './Layout';
-import ScrollContainerContext from '../configs/ScrollContainerContext';
+import Layout from '../Layout';
+import ScrollContainerContext from '../../configs/ScrollContainerContext';
 
 // Reads the provided ref after mount (refs are only populated post-commit).
 function Probe() {

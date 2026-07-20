@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import loadImage from './loadImages';
+import loadImage from '../loadImages';
 
 describe('loadImage', () => {
   it('resolves a known robot image to a URL', () => {
