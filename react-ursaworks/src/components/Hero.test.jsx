@@ -21,4 +21,5 @@ test('renders the logo, wordmark, subtitle, and scroll hint', () => {
     expect(screen.getByText('URSAWORKS')).toBeInTheDocument();
     expect(screen.getByText('AT WASHINGTON UNIVERSITY IN ST. LOUIS')).toBeInTheDocument();
     expect(container.querySelector('.scrollHint')).toBeInTheDocument();
+    expect(container.querySelector('.hero')).toHaveStyle({ pointerEvents: 'none' });
 });

@@ -29,7 +29,7 @@ export default function Hero() {
     return (
         <motion.div
             className="hero"
-            style={reducedMotion ? { opacity } : { opacity, scale, y }}
+            style={reducedMotion ? { opacity, pointerEvents: 'none' } : { opacity, scale, y, pointerEvents: 'none' }}
         >
             <motion.div
                 className="heroContent"

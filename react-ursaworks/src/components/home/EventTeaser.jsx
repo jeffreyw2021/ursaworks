@@ -24,7 +24,7 @@ export default function EventTeaser({ events = content.events }) {
                     </div>
                     <h3>{latest.name}</h3>
                     <div className="teaserEventLocation">
-                        <img src={locationIcon} alt="Location Icon" />
+                        <img src={locationIcon} alt="" />
                         <p>{latest.location}</p>
                     </div>
                 </div>

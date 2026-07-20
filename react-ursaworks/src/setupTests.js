@@ -1,6 +1,6 @@
 import '@testing-library/jest-dom';
 
-// jsdom does not implement IntersectionObserver (used by Home.jsx).
+// jsdom does not implement IntersectionObserver (used by framer-motion's whileInView).
 class IntersectionObserverStub {
   observe() {}
   unobserve() {}
