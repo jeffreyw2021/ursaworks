@@ -1,0 +1,185 @@
+@import url(../App.css);
+
+/* Scroll runway under the fixed hero: one viewport of empty space the hero
+   scrubs out over before the first teaser section arrives. */
+.heroSpacer {
+    width: 100vw;
+    height: 100vh;
+}
+
+.homeSection {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 3rem;
+    padding: 4rem;
+}
+
+/* Gradient arrow-link, same visual language as .moreAboutLink on /events. */
+.teaserLink {
+    display: inline-flex;
+    align-items: center;
+    color: white;
+    padding: 0.6rem 1.4rem;
+    background: var(--main-grad);
+    border-radius: 0.4rem;
+    text-decoration: none;
+}
+
+.teaserLink:hover {
+    filter: brightness(1.2);
+}
+
+.teaserLink:active {
+    transform: scale(0.98);
+}
+
+.teaserLink span {
+    font-weight: 500;
+    margin-right: 0.6rem;
+    font-size: 1.2rem;
+}
+
+.missionIntro {
+    color: #dddddd;
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 1.5;
+    margin: 2rem 0;
+    max-width: 62rem;
+}
+
+.teaserRobot {
+    width: 100%;
+    display: flex;
+    gap: 4rem;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.teaserRobotFlipped {
+    flex-direction: row-reverse;
+}
+
+.teaserRobotImage {
+    width: calc(40% - 4rem);
+    border-radius: 0.4rem;
+    object-fit: contain;
+    background-image: url(../assets/logoItems/white-stars.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.teaserRobotText {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.teaserRobotText h3 {
+    font-size: 2rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+.teaserRobotText p {
+    color: #cdcdcd;
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 1.44;
+}
+
+.teaserEvent {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.teaserEventImage {
+    position: relative;
+    max-width: 48rem;
+}
+
+.teaserEventImage img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.4rem;
+}
+
+.teaserEventDate {
+    position: absolute;
+    top: 0.4rem;
+    left: 0.4rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.4rem 0.6rem 0.35rem;
+    border-radius: 0.3rem;
+    background-color: #fff;
+    color: #000;
+}
+
+.teaserEvent h3 {
+    font-weight: 500;
+    font-size: 1.6rem;
+    color: #fff;
+}
+
+.teaserEventLocation {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 0.25rem;
+}
+
+.teaserEventLocation img {
+    height: 1.1rem;
+}
+
+.teaserEventLocation p {
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.joinCta {
+    align-items: center;
+    padding-bottom: 6rem;
+}
+
+.joinCtaInner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.6rem;
+    text-align: center;
+}
+
+.joinCtaText {
+    color: #dddddd;
+    font-size: 1.6rem;
+    font-weight: 300;
+}
+
+@media (max-width: 758px) {
+    .homeSection {
+        padding: 3rem 2rem;
+    }
+
+    .teaserRobot,
+    .teaserRobotFlipped {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .teaserRobotText {
+        width: 100%;
+    }
+
+    .teaserRobotImage {
+        width: 100%;
+        aspect-ratio: 16/9;
+    }
+}

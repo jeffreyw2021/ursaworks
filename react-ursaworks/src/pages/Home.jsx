@@ -1,32 +1,20 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React from 'react';
 import Hero from '../components/Hero';
+import MissionTeaser from '../components/home/MissionTeaser';
+import RobotsTeaser from '../components/home/RobotsTeaser';
+import EventTeaser from '../components/home/EventTeaser';
+import JoinCta from '../components/home/JoinCta';
+import '../styles/homeStyle.css';
 
 export default function Home() {
-    const [heroOpacity, setHeroOpacity] = useState(0);
-    const heroRef = useRef(null);
-
-    useEffect(() => {
-        const currentHeroRef = heroRef.current;
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                setHeroOpacity(entry.intersectionRatio);
-            },
-            { threshold: Array.from({ length: 11 }, (_, i) => i * 0.1) }
-        );
-
-        if (currentHeroRef) observer.observe(currentHeroRef);
-
-        return () => {
-            if (currentHeroRef) observer.unobserve(currentHeroRef);
-        };
-    }, []);
-
     return (
         <>
-            <div style={{ opacity: heroOpacity }}>
-                <Hero />
-            </div>
-            <div id="hero" ref={heroRef} />
+            <Hero />
+            <div className="heroSpacer" aria-hidden="true" />
+            <MissionTeaser />
+            <RobotsTeaser />
+            <EventTeaser />
+            <JoinCta />
         </>
     );
 }

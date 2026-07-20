@@ -17,11 +17,6 @@
   display: none; /* Safari, older Chrome/Edge */
 }
 
-#hero{
-  width: 100vw;
-  height: 50vh;
-  margin-bottom: 50vh;
-}
 .content{
   display: flex;
   flex-direction: column;
