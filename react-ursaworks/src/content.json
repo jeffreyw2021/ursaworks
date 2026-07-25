@@ -10,7 +10,7 @@
     },
     {
       "name": "Sentry",
-      "description": "The Sentry is a fully autonomous robot that uses vision algorithms and onboard processing to track, target, and fire at opponents without a human driver. In the 3v3 format, it roams within a restricted zone, providing constant automated pressure and forcing enemy robots to adapt their movements. While it lacks the adaptability of human-driven units, its relentless precision and endurance make it a valuable asset that punishes careless advances and supports teammates through consistent suppression fire.",
+      "description": "The Sentry is a fully autonomous robot that uses vision algorithms and onboard processing to track, target, and fire at opponents without a human driver. In the 3v3 format it provides constant automated pressure and forcing enemy robots to adapt their movements. While it lacks the adaptability of human-driven units, its relentless precision and endurance make it a valuable asset that punishes careless advances and supports teammates through consistent suppression fire.",
       "image": "sentry_2026.png"
     },
     {
