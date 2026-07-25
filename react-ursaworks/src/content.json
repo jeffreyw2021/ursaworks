@@ -6,17 +6,17 @@
     {
       "name": "Hero",
       "description": "The Hero is the powerhouse of the lineup, armed with heavier weapons that deal more damage per shot than any other unit. Designed to dominate direct confrontations, the Hero often leads offensive maneuvers and forces opponents to respect its presence on the field. Its higher survivability and firepower make it the focal point of many strategies, with teams relying on it to break stalemates and secure key objectives.",
-      "image": "hero_2026.png"
+      "image": "hero_2026_tournament.png"
     },
     {
       "name": "Sentry",
       "description": "The Sentry is a fully autonomous robot that uses vision algorithms and onboard processing to track, target, and fire at opponents without a human driver. In the 3v3 format, it roams within a restricted zone, providing constant automated pressure and forcing enemy robots to adapt their movements. While it lacks the adaptability of human-driven units, its relentless precision and endurance make it a valuable asset that punishes careless advances and supports teammates through consistent suppression fire.",
-      "image": "infantry_sentry_2026.png"
+      "image": "sentry_2026.png"
     },
     {
       "name": "Infantry",
       "description": "The Infantry are the most versatile members of the team, combining mobility, adaptability, and solid firepower. Their agility allows them to contest map resources, flank opponents, and coordinate attacks alongside the Hero. With skilled drivers, Infantry can shift quickly between offense and defense, making them the backbone of the 3v3 match. Because they are often fielded in multiples, their collective performance heavily influences the pace and outcome of each round.",
-      "image": "infantry_sentry_2026.png"
+      "image": "infantry_2026.png"
     }
   ],
   "events": [
