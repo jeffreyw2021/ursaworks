@@ -6,6 +6,7 @@ import Home from '../pages/Home';
 import AboutPage from '../pages/AboutPage';
 import EventsPage from '../pages/EventsPage';
 import RobotsPage from '../pages/RobotsPage';
+import ContactPage from '../pages/ContactPage';
 
 
 export default function GlobalController() {
@@ -18,6 +19,7 @@ export default function GlobalController() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/events" element={<EventsPage />} />
           <Route path="/robots" element={<RobotsPage />} />
+          <Route path="/contact" element={<ContactPage />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Route>
       </Routes>

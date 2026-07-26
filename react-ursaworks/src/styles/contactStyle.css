@@ -1,0 +1,106 @@
+@import url(../App.css);
+
+#contactBlock {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100vw;
+    height: auto;
+    z-index: 3;
+    padding: 6.4rem 4rem;
+    padding-top: 10rem;
+}
+
+.contactContent {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    margin-top: 3rem;
+}
+
+.contactLinks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.6rem;
+}
+
+.contactLink {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: white;
+    padding: 1rem 1.6rem;
+    background: var(--main-grad);
+    border-radius: 0.4rem;
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.contactLink:hover {
+    filter: brightness(1.2);
+}
+
+.contactLink img {
+    width: 1.6rem;
+    height: 1.6rem;
+}
+
+.contactOfficers h3 {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 1.6rem;
+}
+
+.officerList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.officerCard {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.4rem;
+    padding: 1.6rem 2rem;
+    border-radius: 0.4rem;
+    background: rgba(255, 255, 255, 0.05);
+    min-width: 20rem;
+}
+
+.officerCard h5 {
+    font-weight: 600;
+    font-size: 1.4rem;
+    color: white;
+}
+
+.officerRole {
+    font-weight: 400;
+    font-size: 1.2rem;
+    color: #cdcdcd;
+}
+
+.officerEmail {
+    font-weight: 400;
+    font-size: 1.2rem;
+    color: #cdcdcd;
+    text-decoration: none;
+}
+
+.officerEmail:hover {
+    color: white;
+}
+
+@media (max-width: 758px) {
+    .contactLinks {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .officerCard {
+        min-width: 100%;
+    }
+}
