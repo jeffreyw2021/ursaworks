@@ -9,7 +9,7 @@ import '../../styles/homeStyle.css';
 export default function MissionTeaser() {
     return (
         <section className="homeSection">
-            <Reveal>
+            <Reveal className="homeSectionInner">
                 <h2 className="sectionTitle">Our Mission</h2>
                 <p className="missionIntro">{content.intro}</p>
                 <Link className="teaserLink" to="/about">

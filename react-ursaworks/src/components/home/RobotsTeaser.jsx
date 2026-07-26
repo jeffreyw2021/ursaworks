@@ -16,7 +16,7 @@ const firstSentence = (text) => {
 export default function RobotsTeaser() {
     return (
         <section className="homeSection">
-            <Reveal>
+            <Reveal className="homeSectionInner">
                 <h2 className="sectionTitle">The Robots</h2>
             </Reveal>
             {content.robots.map((robot, index) => (
@@ -31,12 +31,13 @@ export default function RobotsTeaser() {
                         className="teaserRobotImage"
                     />
                     <div className="teaserRobotText">
+                        <span className="teaserRobotTag">{robot.tag}</span>
                         <h3>{robot.name}</h3>
                         <p>{firstSentence(robot.description)}</p>
                     </div>
                 </Reveal>
             ))}
-            <Reveal>
+            <Reveal className="homeSectionInner">
                 <Link className="teaserLink" to="/robots">
                     <span>Meet All The Robots</span>
                     <FontAwesomeIcon icon={faArrowRight} />

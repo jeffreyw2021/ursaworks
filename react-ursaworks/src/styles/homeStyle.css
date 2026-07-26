@@ -17,6 +17,17 @@
     padding: 4rem;
 }
 
+/* Centered column inside a Reveal wrapper — matches the events-page
+   sectioning where titles, intros, and CTAs sit on the center axis. */
+.homeSectionInner {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+}
+
 /* Gradient arrow-link, same visual language as .moreAboutLink on /events. */
 .teaserLink {
     display: inline-flex;
@@ -47,7 +58,6 @@
     font-size: 2rem;
     font-weight: 300;
     line-height: 1.5;
-    margin: 2rem 0;
     max-width: 62rem;
 }
 
@@ -76,7 +86,18 @@
     width: 60%;
     display: flex;
     flex-direction: column;
-    row-gap: 1rem;
+    row-gap: 0.6rem;
+    padding: 1.6rem 2rem;
+    border-radius: 0.4rem;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.teaserRobotTag {
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #E87ABA;
 }
 
 .teaserRobotText h3 {
@@ -95,6 +116,7 @@
 .teaserEvent {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 0.8rem;
 }
 
