@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import Reveal from './Reveal';
@@ -12,10 +13,10 @@ export default function JoinCta() {
                 <p className="joinCtaText">
                     All WashU students are welcome — no experience required.
                 </p>
-                <a className="teaserLink" href="mailto:ursaworksrobotics@gmail.com">
+                <Link className="teaserLink" to="/contact">
                     <span>Get In Touch</span>
                     <FontAwesomeIcon icon={faArrowRight} />
-                </a>
+                </Link>
             </Reveal>
         </section>
     );
