@@ -29,8 +29,7 @@
     gap: 2rem;
 }
 
-.aboutLeft > .sectionTitle,
-.aboutLeft > .aboutDesc{
+.aboutLeft > .sectionTitle{
     width: 100%;
     text-align: center;
 }
