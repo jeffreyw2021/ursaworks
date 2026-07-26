@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import { Outlet } from 'react-router-dom';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import Cursor from './Cursor';
 import ScrollContainerContext from '../configs/ScrollContainerContext';
 import '../styles/dashboardStyle.css';
 import '../styles/bgAnimationStyle.css';
@@ -12,6 +13,7 @@ export default function Layout() {
     return (
         <ScrollContainerContext.Provider value={containerRef}>
             <div className="container" ref={containerRef}>
+                <Cursor />
                 <Navbar />
 
                 <div className="content">
