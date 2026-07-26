@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 
 export default function Contact({ contactRef }) {
-    const { email, instagramHandle, instagramUrl, clubWebsite, arcWebsite, officers } = content.contact;
+    const { email, instagramHandle, instagramUrl, arcWebsite, officers } = content.contact;
 
     return (
         <div className="infoBlock" id="contactBlock" ref={contactRef}>
@@ -22,10 +22,6 @@ export default function Contact({ contactRef }) {
                     <a className="contactLink" href={instagramUrl} target="_blank" rel="noopener noreferrer">
                         <img src={insIcon} alt="Instagram" />
                         <span>{instagramHandle}</span>
-                    </a>
-                    <a className="contactLink" href={clubWebsite} target="_blank" rel="noopener noreferrer">
-                        <span>Club Website</span>
-                        <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
                     </a>
                     <a className="contactLink" href={arcWebsite} target="_blank" rel="noopener noreferrer">
                         <span>ARC Robotics Competition</span>
