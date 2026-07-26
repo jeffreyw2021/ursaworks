@@ -10,7 +10,7 @@ import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 export default function Event({ eventsRef }) {
     const topEvents = content.events.slice(0, 2);
     const otherEventsToDisplay = content.events.slice(2);
-    const seasonsCompeting = new Set(content.events.map((event) => event.date.slice(-4))).size;
+    const seasonsCompeting = new Set(content.events.map((event) => event.date.match(/\d{4}/)?.[0])).size;
     const stats = [
         { value: content.events.length, label: 'Events Attended' },
         { value: seasonsCompeting, label: 'Seasons Competing' },
@@ -41,15 +41,15 @@ export default function Event({ eventsRef }) {
                                 <p>{competition.description}</p>
                             </div>
                         ))}
-                        <a className="moreAboutLink" href="https://www.robomasterna.com/" alt="More About Robomasters" target="_blank" rel="noopener noreferrer">
+                        <a className="moreAboutLink" href="https://www.robomasterna.com/" target="_blank" rel="noopener noreferrer">
                             <span>More About Robomasters</span>
                             <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
                         </a>
                     </div>
 
                     <div className="topEvent">
-                        {topEvents.map((event, index) => (
-                            <div className="eventInfo" key={index}>
+                        {topEvents.map((event) => (
+                            <div className="eventInfo" key={event.name}>
                                 <div className="eventImage">
                                     <img src={loadImage('events', event.image)} alt={event.name} className="eventPhoto" />
                                     <span>{event.date}</span>
@@ -66,8 +66,8 @@ export default function Event({ eventsRef }) {
 
                 <div className="eventsContent">
                     <div className="otherEvents">
-                        {otherEventsToDisplay.map((event, index) => (
-                            <div className="otherEventInfo" key={index}>
+                        {otherEventsToDisplay.map((event) => (
+                            <div className="otherEventInfo" key={event.name}>
                                 <img src={loadImage('events', event.image)} alt={event.name} className="otherEventPhoto" />
                                 <div className="otherEventText">
                                     <h5>{event.name}</h5>
