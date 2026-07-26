@@ -4,6 +4,19 @@ import { MemoryRouter, Routes, Route } from 'react-router-dom';
 import Layout from '../Layout';
 import ScrollContainerContext from '../../configs/ScrollContainerContext';
 
+// Restored in afterEach (not a trailing statement in the test body) so a
+// failing assertion mid-test can't leave window.matchMedia stubbed for the
+// rest of the file.
+let originalMatchMedia;
+
+afterEach(() => {
+    if (originalMatchMedia) {
+        window.matchMedia = originalMatchMedia;
+        originalMatchMedia = undefined;
+    }
+    vi.restoreAllMocks();
+});
+
 // Reads the provided ref after mount (refs are only populated post-commit).
 function Probe() {
     const containerRef = useContext(ScrollContainerContext);
@@ -28,7 +41,7 @@ test('Layout provides a ref to the scrolling .container div', () => {
 });
 
 test('Layout mounts the custom cursor on a fine pointer', () => {
-    const original = window.matchMedia;
+    originalMatchMedia = window.matchMedia;
     window.matchMedia = (query) => ({
         matches: query.includes('pointer: fine'),
         media: query,
@@ -51,5 +64,4 @@ test('Layout mounts the custom cursor on a fine pointer', () => {
     );
 
     expect(screen.getByTestId('cursor-dot')).toBeInTheDocument();
-    window.matchMedia = original;
 });
