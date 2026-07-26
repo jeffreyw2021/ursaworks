@@ -26,3 +26,30 @@ test('Layout provides a ref to the scrolling .container div', () => {
     );
     expect(screen.getByTestId('probe')).toHaveTextContent('container');
 });
+
+test('Layout mounts the custom cursor on a fine pointer', () => {
+    const original = window.matchMedia;
+    window.matchMedia = (query) => ({
+        matches: query.includes('pointer: fine'),
+        media: query,
+        onchange: null,
+        addListener: () => {},
+        removeListener: () => {},
+        addEventListener: () => {},
+        removeEventListener: () => {},
+        dispatchEvent: () => false,
+    });
+
+    render(
+        <MemoryRouter>
+            <Routes>
+                <Route element={<Layout />}>
+                    <Route index element={<p>home</p>} />
+                </Route>
+            </Routes>
+        </MemoryRouter>
+    );
+
+    expect(screen.getByTestId('cursor-dot')).toBeInTheDocument();
+    window.matchMedia = original;
+});
