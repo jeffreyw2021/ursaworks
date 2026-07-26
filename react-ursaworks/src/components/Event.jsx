@@ -8,32 +8,47 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 
 export default function Event({ eventsRef }) {
-    const eventsToDisplay = content.events.slice(0, 2);
+    const topEvents = content.events.slice(0, 2);
     const otherEventsToDisplay = content.events.slice(2);
+    const seasonsCompeting = new Set(content.events.map((event) => event.date.slice(-4))).size;
+    const stats = [
+        { value: content.events.length, label: 'Events Attended' },
+        { value: seasonsCompeting, label: 'Seasons Competing' },
+        { value: content.competitions.length, label: 'Annual Competitions' },
+    ];
 
     return (
         <div className="infoBlock" id="eventsBlock" ref={eventsRef}>
             <div className="eventMainCard">
-                <div className="robomaster">
-                    <h2 className="sectionTitle">Our Events</h2>
-                    <p className="robomasterDesc">
-                        We have two primary events that we attend each year.
-                    </p>
-                    <p className="robomasterDesc">
-                        <strong>RoboMaster North America (RMNA)</strong> is the premier collegiate robotics competition in the region, bringing together top university teams to design, build, and battle advanced robots in esports-style matches. Inspired by DJI’s global RoboMaster competition in China, RMNA showcases cutting-edge engineering, teamwork, and strategy on an international stage. Each year, the event pushes students to combine mechanical design, computer vision, embedded systems, and AI to compete in high-energy matches that blend robotics with the thrill of competitive gaming.
-                    </p>
-                    <p className="robomasterDesc">
-                        The <strong>Midwest RoboMaster Regional</strong> serves as a key qualifier and community hub for universities across the central United States. Known for its collaborative spirit and fierce competition, the Midwest event provides new and veteran teams alike the opportunity to test their robots, refine strategies, and gain valuable match experience before the North America championship. More than just a stepping stone, it has become a showcase of innovation and creativity, highlighting the technical talent and dedication of Midwest engineering programs.
-                    </p>
-                    <a className="moreAboutLink" href="https://www.robomasterna.com/" alt="More About Robomasters">
-                        <span>More About Robomasters</span>
-                        <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
-                    </a>
-                </div>
+                <div className="eventTopRow">
+                    <div className="robomaster">
+                        <h2 className="sectionTitle">Our Events</h2>
+                        <p className="robomasterDesc">
+                            We have two primary events that we attend each year.
+                        </p>
+                        <div className="eventStats">
+                            {stats.map((stat) => (
+                                <div className="eventStat" key={stat.label}>
+                                    <strong>{stat.value}</strong>
+                                    <span>{stat.label}</span>
+                                </div>
+                            ))}
+                        </div>
+                        {content.competitions.map((competition) => (
+                            <div className="competitionCard" key={competition.name}>
+                                <span className="competitionTag">{competition.tag}</span>
+                                <h3>{competition.name}</h3>
+                                <p>{competition.description}</p>
+                            </div>
+                        ))}
+                        <a className="moreAboutLink" href="https://www.robomasterna.com/" alt="More About Robomasters" target="_blank" rel="noopener noreferrer">
+                            <span>More About Robomasters</span>
+                            <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+                        </a>
+                    </div>
 
-                <div className="eventsContent">
-                    <div className="topEvents">
-                        {eventsToDisplay.map((event, index) => (
+                    <div className="topEvent">
+                        {topEvents.map((event, index) => (
                             <div className="eventInfo" key={index}>
                                 <div className="eventImage">
                                     <img src={loadImage('events', event.image)} alt={event.name} className="eventPhoto" />
@@ -47,6 +62,9 @@ export default function Event({ eventsRef }) {
                             </div>
                         ))}
                     </div>
+                </div>
+
+                <div className="eventsContent">
                     <div className="otherEvents">
                         {otherEventsToDisplay.map((event, index) => (
                             <div className="otherEventInfo" key={index}>

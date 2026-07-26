@@ -19,6 +19,18 @@
       "image": "infantry_2026.png"
     }
   ],
+  "competitions": [
+    {
+      "name": "RoboMaster North America (RMNA)",
+      "tag": "Championship · San Diego, CA",
+      "description": "The premier collegiate RoboMaster competition in the region. Top university teams design, build, and battle advanced robots in high-energy, esports-style matches — combining mechanical design, computer vision, embedded systems, and AI on an international stage."
+    },
+    {
+      "name": "Midwest RoboMaster Regional",
+      "tag": "Regional Qualifier · Purdue University, IN",
+      "description": "A key qualifier and community hub for universities across the central United States. Teams test their robots, refine strategies, and build match experience ahead of the North America championship — a showcase of Midwest engineering talent."
+    }
+  ],
   "events": [
     {
       "name": "RMNA 2025",
