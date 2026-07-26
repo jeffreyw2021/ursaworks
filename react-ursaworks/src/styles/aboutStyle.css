@@ -16,96 +16,69 @@
 .ourMission{
     width: 100%;
     display: flex;
-    gap: 2rem;
+    gap: 4rem;
     justify-content: flex-start;
     align-items: flex-start;
 }
 .aboutLeft{
+    width: 50%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: flex-start;
-    row-gap: 1rem;
+    gap: 2rem;
+}
+
+.aboutLeft > .sectionTitle{
     width: 100%;
-    min-width: 30%;
+    text-align: center;
 }
 
 .aboutDesc{
-    color: #cdcdcd;
+    color: #dddddd;
     font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 1.44;
+}
+
+.highlightCard{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    padding: 1.6rem 2rem;
+    border-radius: 0.4rem;
+    background: rgba(255, 255, 255, 0.05);
+}
+.highlightTag{
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #E87ABA;
+}
+.highlightCard h3{
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #fff;
+}
+.highlightCard p{
+    color: #cdcdcd;
+    font-size: 1.4rem;
     font-weight: 300;
     line-height: 1.44;
 }
 
 .aboutImage{
-    width: 60%;
-    height: 100%;
+    width: 50%;
     border-radius: 0.4rem;
     object-fit: cover;
-}
-
-.ourRobot{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 4rem;
-    justify-content: flex-start;
-    align-items: flex-start;
-}
-.robot{
-    width: 100%;
-    display: flex;
-    gap: 4rem;
-    justify-content: flex-start;
-    align-items: flex-start;
-}
-.robotImage{
-    width: calc(40% - 4rem);
-    border-radius: 0.4rem;
-    object-fit: contain;
-    background-image: url(../assets/logoItems/white-stars.svg);
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-.robotDesc{
-    width: 60%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-    row-gap: 1rem;
-}
-.robotDesc h3{
-    font-size: 2rem;
-    font-weight: 500;
-    color: #fff;
-    margin-top: -0.6rem;
-
-}
-.robotDesc p{
-    color: #cdcdcd;
-    font-size: 1.6rem;
-    font-weight: 300;
-    line-height: 1.44;
 }
 
 
 @media (max-width: 955px) {
 
-    .aboutLeft {
-        width: 100%;
-    }
-
     .aboutDesc{
-        font-size: 1.4rem;
-    }
-
-    .robotDesc h3{
-        font-size: 1.8rem;
-    }
-
-    .robotDesc p{
         font-size: 1.4rem;
     }
 }
@@ -114,21 +87,12 @@
 
     .ourMission{
         flex-direction: column;
+        gap: 3rem;
+    }
+    .aboutLeft {
+        width: 100%;
     }
     .aboutImage {
         width: 100%;
-    }
-
-    .robot{
-        flex-direction: column;
-        align-items: center;
-        gap: 2rem;
-    }
-    .robotDesc{
-        width: 100%;
-    }
-    .robotImage {
-        width: 100%;
-        aspect-ratio: 16/9;
     }
 }

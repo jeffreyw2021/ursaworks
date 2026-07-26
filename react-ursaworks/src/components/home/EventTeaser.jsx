@@ -15,7 +15,7 @@ export default function EventTeaser({ events = content.events }) {
 
     return (
         <section className="homeSection">
-            <Reveal>
+            <Reveal className="homeSectionInner">
                 <h2 className="sectionTitle">Latest Event</h2>
                 <div className="teaserEvent">
                     <div className="teaserEventImage">

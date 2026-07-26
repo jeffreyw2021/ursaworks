@@ -9,10 +9,12 @@ export default function Robots({ robotsRef }) {
         <div className="infoBlock" id="robotsBlock" ref={robotsRef}>
             <div className="ourRobot">
                 <h2 className="sectionTitle">Types of Robots</h2>
-                {content.robots.map((robot, index) => (
-                    <div className="robot" key={index}>
+                <p className="robotsIntro">{content.ourRobot}</p>
+                {content.robots.map((robot) => (
+                    <div className="robot" key={robot.name}>
                         <img src={loadImage('robots', robot.image)} alt={robot.name} className="robotImage" />
                         <div className="robotDesc">
+                            <span className="robotTag">{robot.tag}</span>
                             <h3>{robot.name}</h3>
                             <p>{robot.description}</p>
                         </div>
