@@ -5,8 +5,15 @@ import '../styles/cursorStyle.css';
 // longer. 1 means no lag at all, which is what reduced motion asks for.
 const RING_EASING = 0.18;
 
+// Everything a user can click or type into. One delegated listener covers all
+// of them, so no component has to opt in.
+const INTERACTIVE = 'a, button, [role="button"], input, textarea, select, label';
+
 export default function Cursor() {
     const [enabled, setEnabled] = useState(false);
+    const [hovering, setHovering] = useState(false);
+    const [clicking, setClicking] = useState(false);
+    const [offscreen, setOffscreen] = useState(false);
     const dotRef = useRef(null);
     const ringRef = useRef(null);
 
@@ -62,14 +69,65 @@ export default function Cursor() {
         };
     }, [enabled]);
 
+    useEffect(() => {
+        if (!enabled) return undefined;
+
+        const over = (e) => {
+            if (e.target.closest?.(INTERACTIVE)) setHovering(true);
+        };
+        const out = (e) => {
+            if (!e.target.closest?.(INTERACTIVE)) return;
+            // Moving between children of the same link (icon to label, say)
+            // fires mouseout but is still a hover. Don't flicker.
+            if (e.relatedTarget?.closest?.(INTERACTIVE)) return;
+            setHovering(false);
+        };
+        const down = () => setClicking(true);
+        const up = () => setClicking(false);
+        const leave = () => setOffscreen(true);
+        const enter = () => setOffscreen(false);
+
+        document.addEventListener('mouseover', over);
+        document.addEventListener('mouseout', out);
+        document.addEventListener('mousedown', down);
+        document.addEventListener('mouseup', up);
+        document.addEventListener('mouseleave', leave);
+        document.addEventListener('mouseenter', enter);
+
+        return () => {
+            document.removeEventListener('mouseover', over);
+            document.removeEventListener('mouseout', out);
+            document.removeEventListener('mousedown', down);
+            document.removeEventListener('mouseup', up);
+            document.removeEventListener('mouseleave', leave);
+            document.removeEventListener('mouseenter', enter);
+        };
+    }, [enabled]);
+
     if (!enabled) return null;
+
+    const state = [
+        hovering ? 'isHovering' : '',
+        clicking ? 'isClicking' : '',
+        offscreen ? 'isOffscreen' : '',
+    ]
+        .filter(Boolean)
+        .join(' ');
 
     return (
         <>
-            <div className="cursorRing" data-testid="cursor-ring" ref={ringRef}>
+            <div
+                className={`cursorRing ${state}`.trim()}
+                data-testid="cursor-ring"
+                ref={ringRef}
+            >
                 <span className="cursorRingShape" />
             </div>
-            <div className="cursorDot" data-testid="cursor-dot" ref={dotRef}>
+            <div
+                className={`cursorDot ${state}`.trim()}
+                data-testid="cursor-dot"
+                ref={dotRef}
+            >
                 <span className="cursorDotShape" />
             </div>
         </>

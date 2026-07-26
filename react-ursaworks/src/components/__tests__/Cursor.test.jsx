@@ -70,3 +70,59 @@ test('moves the dot to the pointer position', () => {
     window.requestAnimationFrame.mockRestore();
     restore();
 });
+
+test('grows the ring while an interactive element is hovered', () => {
+    const restore = mockPointer({ fine: true });
+    render(
+        <>
+            <Cursor />
+            <a href="/about">About</a>
+            <p>plain text</p>
+        </>
+    );
+
+    fireEvent.mouseOver(screen.getByRole('link', { name: 'About' }));
+    expect(screen.getByTestId('cursor-ring')).toHaveClass('isHovering');
+
+    fireEvent.mouseOut(screen.getByRole('link', { name: 'About' }));
+    expect(screen.getByTestId('cursor-ring')).not.toHaveClass('isHovering');
+    restore();
+});
+
+test('ignores hover over non-interactive elements', () => {
+    const restore = mockPointer({ fine: true });
+    render(
+        <>
+            <Cursor />
+            <p>plain text</p>
+        </>
+    );
+
+    fireEvent.mouseOver(screen.getByText('plain text'));
+    expect(screen.getByTestId('cursor-ring')).not.toHaveClass('isHovering');
+    restore();
+});
+
+test('marks the cursor as clicking between mousedown and mouseup', () => {
+    const restore = mockPointer({ fine: true });
+    render(<Cursor />);
+
+    fireEvent.mouseDown(document);
+    expect(screen.getByTestId('cursor-dot')).toHaveClass('isClicking');
+
+    fireEvent.mouseUp(document);
+    expect(screen.getByTestId('cursor-dot')).not.toHaveClass('isClicking');
+    restore();
+});
+
+test('hides the cursor when the pointer leaves the window', () => {
+    const restore = mockPointer({ fine: true });
+    render(<Cursor />);
+
+    fireEvent.mouseLeave(document);
+    expect(screen.getByTestId('cursor-dot')).toHaveClass('isOffscreen');
+
+    fireEvent.mouseEnter(document);
+    expect(screen.getByTestId('cursor-dot')).not.toHaveClass('isOffscreen');
+    restore();
+});
