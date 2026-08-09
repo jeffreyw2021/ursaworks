@@ -108,9 +108,11 @@
   color: #E87ABA;
 }
 .eventResult{
+  display: block;
   font-size: 1rem;
   font-weight: 600;
   letter-spacing: 0.08em;
+  line-height: 1.4;
   text-transform: uppercase;
   color: #E87ABA;
 }
@@ -182,6 +184,11 @@
   font-weight: 500;
   font-size: 1.4rem;
   margin-top: 0.6rem;
+  margin-bottom: 0.4rem;
+}
+/* The top cards are a plain block, so the result line needs its own rhythm;
+   .otherEventText gets the same spacing for free from its flex gap. */
+.eventInfo .eventResult{
   margin-bottom: 0.4rem;
 }
 .eventLocationContent{
