@@ -19,6 +19,10 @@
       "description": "We put our engineering to the test each season at ARC events across North America, learning from every match and coming back stronger."
     }
   ],
+  "arc": {
+    "title": "What Is ARC",
+    "description": "ARC Robotics — formerly RoboMaster North America — runs an annual competition where university teams from around the world showcase their engineering through tactical combat and technical challenges. The ARC Championship draws more than 20 international and domestic teams across three events: a 1v1 competition, a 3v3 competition, and an engineering challenge."
+  },
   "robots": [
     {
       "name": "Infantry",

@@ -75,6 +75,13 @@
     object-fit: cover;
 }
 
+.whatIsArc{
+    width: 100%;
+    max-width: 90rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
 
 @media (max-width: 955px) {
 

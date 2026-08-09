@@ -22,6 +22,10 @@ export default function About({ aboutRef }) {
                 </div>
                 <img src={loadImage('about', content.aboutImage)} alt="About" className="aboutImage" />
             </div>
+            <div className="whatIsArc">
+                <h2 className="sectionTitle">{content.arc.title}</h2>
+                <p className="aboutDesc">{content.arc.description}</p>
+            </div>
         </div>
     );
 }
