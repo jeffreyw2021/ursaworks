@@ -23,3 +23,24 @@ const referencedImages = [
 test.each(referencedImages)('%s has an extension loadImages can resolve', (filename) => {
     expect(supported).toContain(filename.split('.').pop().toLowerCase());
 });
+
+// Existence check: filenames referenced in content.json must actually be present
+// under src/assets/<folder>/, mirroring the folder each component passes to
+// loadImage(folder, name). A typo here would otherwise pass the extension check
+// above while rendering a broken image at runtime.
+const referencedImagesByFolder = [
+    { folder: 'about', filename: content.aboutImage },
+    ...content.robots.map((robot) => ({ folder: 'robots', filename: robot.image })),
+    ...content.events.map((event) => ({ folder: 'events', filename: event.image })),
+];
+
+test.each(referencedImagesByFolder)(
+    '$filename exists in src/assets/$folder',
+    ({ folder, filename }) => {
+        const imagePath = resolve(__dirname, '../assets', folder, filename);
+        expect(
+            fs.existsSync(imagePath),
+            `Expected image file "${filename}" to exist at ${imagePath}`
+        ).toBe(true);
+    }
+);
