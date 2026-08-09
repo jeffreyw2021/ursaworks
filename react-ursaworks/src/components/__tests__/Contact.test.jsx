@@ -1,5 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import Contact from '../Contact';
+import content from '../../content.json';
 
 test('renders contact links and leadership content', () => {
     render(<Contact />);
@@ -7,5 +8,9 @@ test('renders contact links and leadership content', () => {
     expect(screen.getByRole('heading', { name: 'Contact Us' })).toBeInTheDocument();
     expect(screen.getByText('ARC Robotics Competition')).toBeInTheDocument();
     expect(screen.getByRole('heading', { name: 'Leadership' })).toBeInTheDocument();
-    expect(screen.getAllByRole('link', { name: /@/ }).length).toBeGreaterThan(0);
+
+    content.contact.officers.forEach(({ name, email }) => {
+        expect(screen.getByText(name)).toBeInTheDocument();
+        expect(screen.getByRole('link', { name: email })).toBeInTheDocument();
+    });
 });
