@@ -16,6 +16,9 @@ font-family: "Inter", sans-serif;
   box-sizing: border-box;
   --white: #ffffff;
   --main-grad: linear-gradient(20deg, #E87ABA 0%, #C871C7 35%, #605DDC 100%);
+  /* Shared content measure. Every page centers its column on this so the
+     site reads as one width instead of stretching edge to edge. */
+  --content-max: 70rem;
   font-family: "Roboto", sans-serif;
 }
 

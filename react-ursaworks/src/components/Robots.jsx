@@ -1,6 +1,8 @@
 import React from 'react';
 import loadImage from '../configs/loadImages';
 import content from "../content.json";
+import Paragraphs from './Paragraphs';
+import NextPageLink from './NextPageLink';
 
 import '../styles/robotsStyle.css';
 
@@ -16,11 +18,12 @@ export default function Robots({ robotsRef }) {
                         <div className="robotDesc">
                             <span className="robotTag">{robot.tag}</span>
                             <h3>{robot.name}</h3>
-                            <p>{robot.description}</p>
+                            <Paragraphs text={robot.description} />
                         </div>
                     </div>
                 ))}
             </div>
+            <NextPageLink to="/contact" label="Get In Touch" />
         </div>
     );
 }

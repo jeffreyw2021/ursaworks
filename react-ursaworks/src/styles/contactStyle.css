@@ -6,9 +6,11 @@
     justify-content: flex-start;
     align-items: flex-start;
     width: 100vw;
+    max-width: var(--content-max);
+    margin: 0 auto;
     height: auto;
     z-index: 3;
-    padding: 6.4rem 4rem;
+    padding: 6.4rem 2rem;
     padding-top: 10rem;
 }
 
@@ -20,10 +22,13 @@
     margin-top: 3rem;
 }
 
+/* One link per line. align-items keeps each pill the width of its own
+   label instead of stretching them all to the column width. */
 .contactLinks {
     display: flex;
-    flex-wrap: wrap;
-    gap: 1.6rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.2rem;
 }
 
 .contactLink {
@@ -95,11 +100,6 @@
 }
 
 @media (max-width: 758px) {
-    .contactLinks {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
     .officerCard {
         min-width: 100%;
     }

@@ -12,12 +12,22 @@ test('renders every robot name and a link to /robots', () => {
 });
 
 test('shows only the first sentence of each description', () => {
-    render(<RobotsTeaser />, { wrapper: MemoryRouter });
-    // Full multi-sentence descriptions belong to /robots, not the teaser.
-    expect(screen.queryByText(content.robots[0].description)).not.toBeInTheDocument();
-    const firstSentence = content.robots[0].description.slice(
-        0,
-        content.robots[0].description.indexOf('. ') + 1
-    );
-    expect(screen.getByText(firstSentence)).toBeInTheDocument();
+    const { container } = render(<RobotsTeaser />, { wrapper: MemoryRouter });
+    // Full descriptions belong to /robots. Asserted as properties of what the
+    // teaser rendered rather than by re-deriving the slice — repeating the
+    // component's own cut would make this agree with a wrong cut.
+    const rendered = [...container.querySelectorAll('.teaserRobotText p')].map((p) => p.textContent);
+    expect(rendered).toHaveLength(content.robots.length);
+
+    rendered.forEach((sentence, index) => {
+        const [opening, ...rest] = content.robots[index].description;
+
+        expect(opening.startsWith(sentence)).toBe(true);
+        expect(sentence).toMatch(/\.$/);
+        // A second sentence would have started after the period-space.
+        expect(sentence).not.toMatch(/\. /);
+        for (const paragraph of rest) {
+            expect(screen.queryByText(paragraph)).not.toBeInTheDocument();
+        }
+    });
 });

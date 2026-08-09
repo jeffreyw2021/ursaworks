@@ -10,7 +10,7 @@ export default function Footer() {
     return (
         <footer>
             <div className="footerContent">
-                <p>© {currentYear} - WashU Ursaworks Robomaster Club</p>
+                <p>© {currentYear} - WashU Ursaworks Robotics</p>
                 <div className="footerLink">
                     <img src={emailIcon} alt="Email" />
                     <a href="mailto:ursaworksrobotics@gmail.com">ursaworksrobotics@gmail.com</a>

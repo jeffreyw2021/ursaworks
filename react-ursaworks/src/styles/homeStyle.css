@@ -14,11 +14,20 @@
     justify-content: flex-start;
     align-items: flex-start;
     gap: 3rem;
-    padding: 4rem;
+    padding: 4rem 2rem;
 }
 
 /* Centered column inside a Reveal wrapper — matches the events-page
    sectioning where titles, intros, and CTAs sit on the center axis. */
+/* Everything in a section sits on the shared measure, whether it is wrapped
+   in .homeSectionInner or dropped straight into the section like the robot
+   rows. Keeps one content edge down the whole page. */
+.homeSection > * {
+    width: 100%;
+    max-width: var(--content-max);
+    align-self: center;
+}
+
 .homeSectionInner {
     width: 100%;
     display: flex;
@@ -55,7 +64,7 @@
 
 .missionIntro {
     color: #dddddd;
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-weight: 300;
     line-height: 1.5;
     max-width: 62rem;

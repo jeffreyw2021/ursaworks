@@ -6,6 +6,8 @@
   justify-content: flex-start;
   align-items: center;
   width: 100vw;
+  max-width: var(--content-max);
+  margin: 0 auto;
   height: auto;
   z-index: 3;
   padding-top: 10rem;
@@ -15,7 +17,7 @@
   width: 100%;
   /* background-color: rgb(6, 6, 6, 0.2);
   backdrop-filter: blur(5px); */
-  padding: 0 4rem 4rem;
+  padding: 0 2rem 4rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -45,6 +47,13 @@
 }
 .topEvent .eventInfo{
   width: 100%;
+}
+/* Divider between the two featured events. Sits on the second card so it
+   never renders above the first, or at all when only one event exists.
+   The 2rem padding balances .topEvent's 2rem gap on the other side. */
+.topEvent .eventInfo + .eventInfo{
+  padding-top: 2rem;
+  border-top: 0.8px solid rgb(255, 255, 255, 0.3);
 }
 .robomasterDesc {
   color: #dddddd;
@@ -104,6 +113,15 @@
   font-size: 1rem;
   font-weight: 600;
   letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #E87ABA;
+}
+.eventResult{
+  display: block;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  line-height: 1.4;
   text-transform: uppercase;
   color: #E87ABA;
 }
@@ -175,6 +193,11 @@
   font-weight: 500;
   font-size: 1.4rem;
   margin-top: 0.6rem;
+  margin-bottom: 0.4rem;
+}
+/* The top cards are a plain block, so the result line needs its own rhythm;
+   .otherEventText gets the same spacing for free from its flex gap. */
+.eventInfo .eventResult{
   margin-bottom: 0.4rem;
 }
 .eventLocationContent{
