@@ -92,6 +92,12 @@
     gap: 2rem;
 }
 
+/* #aboutBlock's 12rem gap already separates the link from the mission;
+   the component's own top margin would stack on top of it. */
+#aboutBlock .nextPageLink{
+    margin-top: 0;
+}
+
 @media (max-width: 955px) {
 
     .aboutDesc{

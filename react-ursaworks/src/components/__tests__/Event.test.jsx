@@ -1,9 +1,10 @@
 import { render, screen } from '@testing-library/react';
+import { MemoryRouter } from 'react-router-dom';
 import Event from '../Event';
 import content from '../../content.json';
 
 test('renders a result line only for events that have one', () => {
-    const { container } = render(<Event />);
+    const { container } = render(<Event />, { wrapper: MemoryRouter });
     const withResult = content.events.filter((event) => event.result);
 
     // Guards the test itself: if no entry has a result, the assertions below
@@ -17,7 +18,7 @@ test('renders a result line only for events that have one', () => {
 });
 
 test('shows the events intro below the stats', () => {
-    const { container } = render(<Event />);
+    const { container } = render(<Event />, { wrapper: MemoryRouter });
     const intro = container.querySelector('.robomasterDesc');
     const stats = container.querySelector('.eventStats');
 
@@ -26,6 +27,6 @@ test('shows the events intro below the stats', () => {
 });
 
 test('labels the outbound link for ARC', () => {
-    render(<Event />);
+    render(<Event />, { wrapper: MemoryRouter });
     expect(screen.getByRole('link', { name: /more about arc/i })).toBeInTheDocument();
 });

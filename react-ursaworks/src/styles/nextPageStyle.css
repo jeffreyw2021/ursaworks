@@ -1,0 +1,29 @@
+@import url(../App.css);
+
+/* The page containers are flex columns aligned to flex-start, so the link
+   centers itself rather than relying on each page to place it. */
+.nextPageLink {
+    align-self: center;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-top: 6rem;
+    padding: 0.6rem 1.4rem;
+    color: white;
+    background: var(--main-grad);
+    border-radius: 0.4rem;
+    text-decoration: none;
+}
+
+.nextPageLink:hover {
+    filter: brightness(1.2);
+}
+
+.nextPageLink:active {
+    transform: scale(0.98);
+}
+
+.nextPageLink span {
+    font-weight: 500;
+    font-size: 1.2rem;
+}

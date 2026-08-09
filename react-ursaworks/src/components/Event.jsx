@@ -3,6 +3,7 @@ import loadImage from '../configs/loadImages';
 import content from "../content.json";
 import locationIcon from '../assets/logoItems/locationIcon.svg';
 import calendarIcon from '../assets/logoItems/calendarIcon.svg';
+import NextPageLink from './NextPageLink';
 import '../styles/eventStyle.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
@@ -87,6 +88,7 @@ export default function Event({ eventsRef }) {
                     </div>
                 </div>
             </div>
+            <NextPageLink to="/robots" label="Meet All The Robots" />
         </div>
     );
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import loadImage from '../configs/loadImages';
 import content from "../content.json";
 import Paragraphs from './Paragraphs';
+import NextPageLink from './NextPageLink';
 
 import '../styles/aboutStyle.css';
 
@@ -27,6 +28,7 @@ export default function About({ aboutRef }) {
                 </div>
                 <img src={loadImage('about', content.aboutImage)} alt="About" className="aboutImage" />
             </div>
+            <NextPageLink to="/events" label="See All Events" />
         </div>
     );
 }

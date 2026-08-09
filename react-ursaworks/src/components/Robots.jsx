@@ -2,6 +2,7 @@ import React from 'react';
 import loadImage from '../configs/loadImages';
 import content from "../content.json";
 import Paragraphs from './Paragraphs';
+import NextPageLink from './NextPageLink';
 
 import '../styles/robotsStyle.css';
 
@@ -22,6 +23,7 @@ export default function Robots({ robotsRef }) {
                     </div>
                 ))}
             </div>
+            <NextPageLink to="/contact" label="Get In Touch" />
         </div>
     );
 }
