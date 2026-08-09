@@ -8,7 +8,10 @@ import Reveal from './Reveal';
 import '../../styles/homeStyle.css';
 
 // The teaser shows one sentence per robot; full descriptions live on /robots.
-const firstSentence = (text) => {
+// Descriptions are authored as an array of paragraphs, so the opening sentence
+// is the start of the first one.
+const firstSentence = (description) => {
+    const text = Array.isArray(description) ? description[0] : description;
     const end = text.indexOf('. ');
     return end === -1 ? text : text.slice(0, end + 1);
 };

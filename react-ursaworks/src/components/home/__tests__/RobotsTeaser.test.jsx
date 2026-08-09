@@ -13,11 +13,19 @@ test('renders every robot name and a link to /robots', () => {
 
 test('shows only the first sentence of each description', () => {
     render(<RobotsTeaser />, { wrapper: MemoryRouter });
-    // Full multi-sentence descriptions belong to /robots, not the teaser.
-    expect(screen.queryByText(content.robots[0].description)).not.toBeInTheDocument();
-    const firstSentence = content.robots[0].description.slice(
-        0,
-        content.robots[0].description.indexOf('. ') + 1
-    );
-    expect(screen.getByText(firstSentence)).toBeInTheDocument();
+    // Full descriptions belong to /robots. The teaser carries the opening
+    // sentence only, so nothing past the first paragraph may appear here.
+    for (const robot of content.robots) {
+        const [opening, ...rest] = robot.description;
+        const end = opening.indexOf('. ');
+        const firstSentence = end === -1 ? opening : opening.slice(0, end + 1);
+
+        expect(screen.getByText(firstSentence)).toBeInTheDocument();
+        if (firstSentence !== opening) {
+            expect(screen.queryByText(opening)).not.toBeInTheDocument();
+        }
+        for (const paragraph of rest) {
+            expect(screen.queryByText(paragraph)).not.toBeInTheDocument();
+        }
+    }
 });

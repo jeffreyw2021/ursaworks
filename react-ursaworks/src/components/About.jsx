@@ -1,6 +1,7 @@
 import React from 'react';
 import loadImage from '../configs/loadImages';
 import content from "../content.json";
+import Paragraphs from './Paragraphs';
 
 import '../styles/aboutStyle.css';
 
@@ -10,12 +11,12 @@ export default function About({ aboutRef }) {
         <div className="infoBlock" id="aboutBlock" ref={aboutRef}>
             <div className="whatIsArc">
                 <h2 className="sectionTitle">{content.arc.title}</h2>
-                <p className="aboutDesc">{content.arc.description}</p>
+                <Paragraphs className="aboutDesc" text={content.arc.description} />
             </div>
             <div className="ourMission">
                 <div className="aboutLeft">
                     <h2 className="sectionTitle">Our Mission</h2>
-                    <p className="aboutDesc">{content.intro}</p>
+                    <Paragraphs className="aboutDesc" text={content.intro} />
                     {content.aboutHighlights.map((highlight) => (
                         <div className="highlightCard" key={highlight.name}>
                             <span className="highlightTag">{highlight.tag}</span>

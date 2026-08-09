@@ -5,13 +5,17 @@ import content from '../../content.json';
 test('renders the What Is ARC section', () => {
     render(<About />);
     expect(screen.getByRole('heading', { name: content.arc.title })).toBeInTheDocument();
-    expect(screen.getByText(content.arc.description)).toBeInTheDocument();
+    for (const paragraph of content.arc.description) {
+        expect(screen.getByText(paragraph)).toBeInTheDocument();
+    }
 });
 
 test('still renders the mission alongside it', () => {
     render(<About />);
     expect(screen.getByRole('heading', { name: /our mission/i })).toBeInTheDocument();
-    expect(screen.getByText(content.intro)).toBeInTheDocument();
+    for (const paragraph of content.intro) {
+        expect(screen.getByText(paragraph)).toBeInTheDocument();
+    }
 });
 
 test('leads with the ARC section, then the mission', () => {
