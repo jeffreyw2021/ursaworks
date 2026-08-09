@@ -23,9 +23,6 @@ export default function Event({ eventsRef }) {
                 <div className="eventTopRow">
                     <div className="robomaster">
                         <h2 className="sectionTitle">Our Events</h2>
-                        <p className="robomasterDesc">
-                            We have two primary events that we attend each year.
-                        </p>
                         <div className="eventStats">
                             {stats.map((stat) => (
                                 <div className="eventStat" key={stat.label}>
@@ -34,6 +31,9 @@ export default function Event({ eventsRef }) {
                                 </div>
                             ))}
                         </div>
+                        <p className="robomasterDesc">
+                            We have two primary events that we attend each year.
+                        </p>
                         {content.competitions.map((competition) => (
                             <div className="competitionCard" key={competition.name}>
                                 <span className="competitionTag">{competition.tag}</span>
@@ -42,7 +42,7 @@ export default function Event({ eventsRef }) {
                             </div>
                         ))}
                         <a className="moreAboutLink" href="https://www.robomasterna.com/" target="_blank" rel="noopener noreferrer">
-                            <span>More About Robomasters</span>
+                            <span>More About ARC</span>
                             <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
                         </a>
                     </div>
@@ -55,6 +55,7 @@ export default function Event({ eventsRef }) {
                                     <span>{event.date}</span>
                                 </div>
                                 <h5>{event.name}</h5>
+                                {event.result && <span className="eventResult">{event.result}</span>}
                                 <div className="eventLocationContent">
                                     <img src={locationIcon} alt="Location Icon" className="locationIcon" />
                                     <p>{event.location}</p>
@@ -71,6 +72,7 @@ export default function Event({ eventsRef }) {
                                 <img src={loadImage('events', event.image)} alt={event.name} className="otherEventPhoto" />
                                 <div className="otherEventText">
                                     <h5>{event.name}</h5>
+                                    {event.result && <span className="eventResult">{event.result}</span>}
                                     <div className="otherEventLocation">
                                         <img src={locationIcon} alt="Location Icon" className="miniIcon" />
                                         <p>{event.location}</p>
