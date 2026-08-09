@@ -1,4 +1,4 @@
-import { fireEvent, render, screen } from '@testing-library/react';
+import { fireEvent, render, screen, within } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import Navbar from '../Navbar';
 
@@ -18,18 +18,27 @@ test('mobile menu starts closed and opens with all primary destinations', () => 
     fireEvent.click(toggle);
 
     expect(toggle).toHaveAttribute('aria-expanded', 'true');
-    expect(screen.getByRole('link', { name: 'ABOUT' })).toBeVisible();
-    expect(screen.getByRole('link', { name: 'EVENTS' })).toBeVisible();
-    expect(screen.getByRole('link', { name: 'ROBOTS' })).toBeVisible();
-    expect(screen.getByRole('link', { name: 'CONTACT' })).toBeVisible();
-    expect(screen.getByRole('link', { name: 'JOIN US' })).toHaveAttribute('target', '_blank');
+    const mobileMenu = screen.getByTestId('mobile-menu');
+
+    expect(within(mobileMenu).getByRole('link', { name: 'ABOUT' })).toBeVisible();
+    expect(within(mobileMenu).getByRole('link', { name: 'EVENTS' })).toBeVisible();
+    expect(within(mobileMenu).getByRole('link', { name: 'ROBOTS' })).toBeVisible();
+    expect(within(mobileMenu).getByRole('link', { name: 'CONTACT' })).toBeVisible();
+
+    const joinUsLink = within(mobileMenu).getByRole('link', { name: 'JOIN US' });
+    expect(joinUsLink).toHaveAttribute(
+        'href',
+        'https://docs.google.com/forms/d/e/1FAIpQLSeLZA5S6mubtBZEqAkaxPZ_qtcPbZ42d1Mc69lE729pCAPCBQ/viewform?usp=dialog'
+    );
+    expect(joinUsLink).toHaveAttribute('target', '_blank');
+    expect(joinUsLink).toHaveAttribute('rel', 'noopener noreferrer');
 });
 
 test('selecting an internal destination closes the mobile menu', () => {
     renderNavbar();
     const toggle = screen.getByRole('button', { name: /open navigation menu/i });
     fireEvent.click(toggle);
-    fireEvent.click(screen.getByRole('link', { name: 'CONTACT' }));
+    fireEvent.click(within(screen.getByTestId('mobile-menu')).getByRole('link', { name: 'CONTACT' }));
 
     expect(toggle).toHaveAttribute('aria-expanded', 'false');
 });
