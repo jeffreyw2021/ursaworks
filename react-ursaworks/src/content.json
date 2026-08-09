@@ -1,6 +1,6 @@
 {
   "intro": "At Ursaworks, our mission is to advance robotics and industry by bringing together students who are passionate about innovation. Our focus is on fostering a collaborative environment where students from any background can develop their skills through competition. We're committed to nurturing talent and promoting hard work to prepare our members for future challenges in technology. All WashU students are welcome to join and participate!",
-  "ourRobot": "Each year, the Robomaster Competition challenges teams to design and build robots for a paintball-like game. Last season, we developed and tested these robots:",
+  "ourRobot": "Each year, the ARC Robotics Competition challenges teams to design and build robots for a combat-style game. Last season, we developed and tested these 3 robots:",
   "aboutImage": "frontPage.png",
   "aboutHighlights": [
     {
@@ -16,39 +16,39 @@
     {
       "name": "Built To Compete",
       "tag": "Competition Driven",
-      "description": "We put our engineering to the test each season at RoboMaster events across North America, learning from every match and coming back stronger."
+      "description": "We put our engineering to the test each season at ARC events across North America, learning from every match and coming back stronger."
     }
   ],
   "robots": [
+    {
+      "name": "Infantry",
+      "tag": "Driver Controlled · 17mm Projectiles · 1v1 & 3v3",
+      "description": "The Infantry are the most versatile members of the team, combining mobility, adaptability, and solid firepower. Their agility allows them to contest map resources, flank opponents, and coordinate attacks alongside the Hero. With skilled drivers, Infantry can shift quickly between offense and defense, making them the backbone of the 3v3 match.",
+      "image": "infantry_2026.png"
+    },
+    {
+      "name": "Sentry",
+      "tag": "Fully Autonomous · 17mm Projectiles · 3v3",
+      "description": "The Sentry uses vision algorithms and onboard processing to track, target, and fire at opponents without a human driver. In the 3v3 format, it provides constant automated pressure and forces enemy robots to adapt their movements. While it lacks the adaptability of human-driven units, its relentless precision and endurance make it a valuable asset that punishes careless advances and supports teammates through consistent suppression fire.",
+      "image": "sentry_2026.png"
+    },
     {
       "name": "Hero",
       "tag": "Driver Controlled · 42mm Projectiles · 3v3",
       "description": "The Hero is the powerhouse of the lineup, armed with heavier weapons that deal more damage per shot than any other unit. Designed to dominate direct confrontations, the Hero often leads offensive maneuvers and forces opponents to respect its presence on the field. Its higher survivability and firepower make it the focal point of many strategies, with teams relying on it to break stalemates and secure key objectives.",
       "image": "hero_2026_tournament.png"
-    },
-    {
-      "name": "Sentry",
-      "tag": "Fully Autonomous · 17mm Projectiles · 3v3",
-      "description": "The Sentry uses vision algorithms and onboard processing to track, target, and fire at opponents without a human driver. In the 3v3 format, it roams within a restricted zone, providing constant automated pressure and forcing enemy robots to adapt their movements. While it lacks the adaptability of human-driven units, its relentless precision and endurance make it a valuable asset that punishes careless advances and supports teammates through consistent suppression fire.",
-      "image": "sentry_2026.png"
-    },
-    {
-      "name": "Infantry",
-      "tag": "Driver Controlled · 17mm Projectiles · 1v1 & 3v3",
-      "description": "The Infantry are the most versatile members of the team, combining mobility, adaptability, and solid firepower. Their agility allows them to contest map resources, flank opponents, and coordinate attacks alongside the Hero. With skilled drivers, Infantry can shift quickly between offense and defense, making them the backbone of the 3v3 match. Because they are often fielded in multiples, their collective performance heavily influences the pace and outcome of each round.",
-      "image": "infantry_2026.png"
     }
   ],
   "competitions": [
     {
-      "name": "RoboMaster North America (RMNA)",
-      "tag": "Championship · San Diego, CA",
-      "description": "The premier collegiate RoboMaster competition in the region. Top university teams design, build, and battle advanced robots in high-energy, esports-style matches — combining mechanical design, computer vision, embedded systems, and AI on an international stage."
+      "name": "ARC Championship (ARCC)",
+      "tag": "Championship",
+      "description": "The premier collegiate ARC competition in the region. Top university teams design, build, and battle advanced robots in high-energy, esports-style matches — combining mechanical design, computer vision, embedded systems, and AI on an international stage."
     },
     {
-      "name": "Midwest RoboMaster Regional",
-      "tag": "Regional Qualifier · Purdue University, IN",
-      "description": "A key qualifier and community hub for universities across the central United States. Teams test their robots, refine strategies, and build match experience ahead of the North America championship — a showcase of Midwest engineering talent."
+      "name": "Midwest ARC Regional",
+      "tag": "Regional Qualifier",
+      "description": "A key qualifier and community hub for universities across the central United States. Teams test their robots, refine strategies, and build match experience ahead of the ARC Championship — a showcase of Midwest engineering talent."
     }
   ],
   "events": [
