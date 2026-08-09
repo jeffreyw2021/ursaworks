@@ -46,6 +46,13 @@
 .topEvent .eventInfo{
   width: 100%;
 }
+/* Divider between the two featured events. Sits on the second card so it
+   never renders above the first, or at all when only one event exists.
+   The 2rem padding balances .topEvent's 2rem gap on the other side. */
+.topEvent .eventInfo + .eventInfo{
+  padding-top: 2rem;
+  border-top: 0.8px solid rgb(255, 255, 255, 0.3);
+}
 .robomasterDesc {
   color: #dddddd;
   font-size: 1.6rem;
