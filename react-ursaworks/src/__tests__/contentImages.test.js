@@ -32,6 +32,9 @@ const referencedImagesByFolder = [
     { folder: 'about', filename: content.aboutImage },
     ...content.robots.map((robot) => ({ folder: 'robots', filename: robot.image })),
     ...content.events.map((event) => ({ folder: 'events', filename: event.image })),
+    // Team.jsx reads these from 'members', not 'team' — the folder name and the
+    // content key differ, which is exactly the kind of mismatch this catches.
+    ...content.team.map((member) => ({ folder: 'members', filename: member.image })),
 ];
 
 test.each(referencedImagesByFolder)(

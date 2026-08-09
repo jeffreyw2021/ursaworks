@@ -141,7 +141,7 @@ Automatic knock-on effects, all desired:
 
 ### A. `src/configs/loadImages.js` — support `.webp`
 
-```
+```text
 '../assets/**/*.{png,jpg,jpeg,svg}'  →  '../assets/**/*.{png,jpg,jpeg,svg,webp}'
 ```
 

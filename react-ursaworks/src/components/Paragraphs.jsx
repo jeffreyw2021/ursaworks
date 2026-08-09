@@ -8,7 +8,9 @@ import React from 'react';
 export default function Paragraphs({ text, className }) {
     const paragraphs = Array.isArray(text) ? text : [text];
 
-    return paragraphs.map((paragraph) => (
-        <p className={className} key={paragraph}>{paragraph}</p>
+    // Keyed by position: the list is static content-file copy that never
+    // reorders, and two paragraphs in one field could repeat the same text.
+    return paragraphs.map((paragraph, index) => (
+        <p className={className} key={index}>{paragraph}</p>
     ));
 }
