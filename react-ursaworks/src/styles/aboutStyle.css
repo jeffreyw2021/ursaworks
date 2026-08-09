@@ -3,8 +3,10 @@
 
 #aboutBlock {
     width: 100vw;
+    max-width: var(--content-max);
+    margin: 0 auto;
     height: auto;
-    padding: 6.4rem 4rem;
+    padding: 6.4rem 2rem;
     padding-top: 10rem;
     display: flex;
     flex-direction: column;
@@ -82,11 +84,9 @@
     top: 8rem;
 }
 
+/* The page container now supplies the measure and centering. */
 .whatIsArc{
     width: 100%;
-    max-width: 70rem;
-    align-self: center;
-    padding: 0 2rem;
     display: flex;
     flex-direction: column;
     gap: 2rem;

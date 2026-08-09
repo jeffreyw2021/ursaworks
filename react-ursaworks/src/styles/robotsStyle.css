@@ -6,9 +6,11 @@
     justify-content: flex-start;
     align-items: flex-start;
     width: 100vw;
+    max-width: var(--content-max);
+    margin: 0 auto;
     height: auto;
     z-index: 3;
-    padding: 6.4rem 4rem;
+    padding: 6.4rem 2rem;
     padding-top: 10rem;
 }
 

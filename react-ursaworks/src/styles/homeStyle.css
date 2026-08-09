@@ -14,13 +14,15 @@
     justify-content: flex-start;
     align-items: flex-start;
     gap: 3rem;
-    padding: 4rem;
+    padding: 4rem 2rem;
 }
 
 /* Centered column inside a Reveal wrapper — matches the events-page
    sectioning where titles, intros, and CTAs sit on the center axis. */
 .homeSectionInner {
     width: 100%;
+    max-width: var(--content-max);
+    align-self: center;
     display: flex;
     flex-direction: column;
     align-items: center;
