@@ -26,7 +26,10 @@ test('shows the events intro below the stats', () => {
     expect(intro.compareDocumentPosition(stats) & Node.DOCUMENT_POSITION_PRECEDING).toBeTruthy();
 });
 
-test('labels the outbound link for ARC', () => {
+test('labels the outbound link for ARC and points it at the content-file URL', () => {
     render(<Event />, { wrapper: MemoryRouter });
-    expect(screen.getByRole('link', { name: /more about arc/i })).toBeInTheDocument();
+    // Contact renders the same destination. Both read content.contact.arcWebsite
+    // so the two cannot drift — this one used to hardcode the pre-rebrand domain.
+    expect(screen.getByRole('link', { name: /more about arc/i }))
+        .toHaveAttribute('href', content.contact.arcWebsite);
 });

@@ -42,7 +42,7 @@ export default function Event({ eventsRef }) {
                                 <p>{competition.description}</p>
                             </div>
                         ))}
-                        <a className="moreAboutLink" href="https://www.robomasterna.com/" target="_blank" rel="noopener noreferrer">
+                        <a className="moreAboutLink" href={content.contact.arcWebsite} target="_blank" rel="noopener noreferrer">
                             <span>More About ARC</span>
                             <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
                         </a>
