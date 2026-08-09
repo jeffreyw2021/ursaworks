@@ -6,6 +6,7 @@ import '../styles/navbarStyle.css';
 export default function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const navbarRef = useRef(null);
+    const toggleRef = useRef(null);
     const closeMenu = () => setIsMenuOpen(false);
     const navigationItems = [
         { label: 'ABOUT', to: '/about' },
@@ -27,8 +28,9 @@ export default function Navbar() {
             }
         };
         const handleKeyDown = (event) => {
-            if (event.key === 'Escape') {
+            if (event.key === 'Escape' && isMenuOpen) {
                 setIsMenuOpen(false);
+                toggleRef.current?.focus();
             }
         };
 
@@ -39,7 +41,7 @@ export default function Navbar() {
             document.removeEventListener('mousedown', handleMouseDown);
             document.removeEventListener('keydown', handleKeyDown);
         };
-    }, []);
+    }, [isMenuOpen]);
 
     return (
         <nav className="header" ref={navbarRef}>
@@ -50,6 +52,7 @@ export default function Navbar() {
                 id="mobile-navigation-toggle"
                 className="mobileMenuToggle"
                 type="button"
+                ref={toggleRef}
                 aria-expanded={isMenuOpen}
                 aria-controls="mobile-navigation-menu"
                 aria-label={isMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}

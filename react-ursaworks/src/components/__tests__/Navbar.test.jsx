@@ -42,3 +42,16 @@ test('selecting an internal destination closes the mobile menu', () => {
 
     expect(toggle).toHaveAttribute('aria-expanded', 'false');
 });
+
+test('Escape closes the mobile menu and restores focus to the toggle', () => {
+    renderNavbar();
+    const toggle = screen.getByRole('button', { name: /open navigation menu/i });
+    fireEvent.click(toggle);
+
+    const contactLink = within(screen.getByTestId('mobile-menu')).getByRole('link', { name: 'CONTACT' });
+    contactLink.focus();
+    fireEvent.keyDown(contactLink, { key: 'Escape' });
+
+    expect(toggle).toHaveAttribute('aria-expanded', 'false');
+    expect(document.activeElement).toBe(toggle);
+});
